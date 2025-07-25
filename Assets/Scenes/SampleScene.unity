@@ -148,7 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12d7dff36c88b4bc3bbf9d4077283fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
+  healthSlider: {fileID: 0}
+  socialSlider: {fileID: 0}
 --- !u!4 &1654911459
 Transform:
   m_ObjectHideFlags: 0
