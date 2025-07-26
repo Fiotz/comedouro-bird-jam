@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1552185582347232786}
   - component: {fileID: 3033269097324211572}
   - component: {fileID: 622995219393777513}
+  - component: {fileID: 1002025548255339565}
   m_Layer: 0
   m_Name: saira7cores
   m_TagString: Passaro
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8950759142192175709, guid: 86ad3a1e80f4bf445a2e2cc9a2634fea, type: 3}
+  m_Sprite: {fileID: -3346332134342680977, guid: a5303620ce49bfe4d8dc456519870f8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,6 +104,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Anilha: {fileID: 4149133193176087741}
   isSpecialBird: 0
+  nameOfBird: semNome
+--- !u!95 &1002025548255339565
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130303418410881012}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a598d03bfcf0a8419533a6e383adb0d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4149133193176087741
 GameObject:
   m_ObjectHideFlags: 0
