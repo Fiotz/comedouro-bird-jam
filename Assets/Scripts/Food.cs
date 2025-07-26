@@ -10,6 +10,8 @@ public class Food : MonoBehaviour
 
     private float timeOfExistenceInSeconds = 0;
 
+    private int position = -1;
+
     void Awake()
     {
         // Adicionar random da lista de foods 
@@ -18,6 +20,7 @@ public class Food : MonoBehaviour
     void Start()
     {
 
+        this.GetComponent<SpriteRenderer>().sprite = food1;
     }
 
     // Update is called once per frame
@@ -39,5 +42,15 @@ public class Food : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void setPosition(int pos)
+    {
+        position = pos;
+    }
+
+    public int getPosition()
+    {
+        return position;
     }
 }

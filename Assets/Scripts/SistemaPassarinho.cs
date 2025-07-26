@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SistemaPassarinho : MonoBehaviour
@@ -30,6 +32,8 @@ public class SistemaPassarinho : MonoBehaviour
     private int level;
 
     private bool hasViewOneSanhaco = false;
+
+    private List<int> usageArray = new List<int>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -105,7 +109,26 @@ public class SistemaPassarinho : MonoBehaviour
 
     public void createFood()
     {
-        Instantiate(foodObj, stayPoint[stayPoint.Length - 1].transform.position, Quaternion.identity);
-        Instantiate(saira7cores, stayPoint[stayPoint.Length - 1].transform.position, Quaternion.identity);
+        GameObject[] spawnFood = GameObject.FindGameObjectsWithTag("SpawnComida");
+        List<GameObject> spawnLivres = new List<GameObject>();
+        foreach (GameObject gameObject in spawnFood)
+        {
+            if (gameObject.transform.childCount == 0)
+            {
+                spawnLivres.Add(gameObject);
+            }
+        }
+
+        if (spawnLivres.Count() == 0)
+        {
+            Debug.Log("Cannot Create more food");
+        }
+        else
+        {
+            int position = Random.Range(0, spawnLivres.Count());
+            Debug.Log("Creating food in position: " + position);
+            Instantiate(foodObj, spawnLivres[position].transform.position, Quaternion.identity, spawnLivres[position].transform);
+            Instantiate(saira7cores, spawnLivres[position].transform.position, Quaternion.identity, spawnLivres[position].transform);
+        }
     }
 }

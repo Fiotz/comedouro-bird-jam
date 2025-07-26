@@ -39,7 +39,7 @@ public class SistemaComedouroScript : MonoBehaviour
     {
         if (canCheckStatus && isPlaying)
         {
-            print("Check Status");
+            // print("Check Status");
             StartCoroutine(VerifyStatusRoutine());
         }
     }
@@ -47,11 +47,11 @@ public class SistemaComedouroScript : MonoBehaviour
     IEnumerator VerifyStatusRoutine()
     {
         canCheckStatus = false;
-        Debug.Log("VerifyFood");
+        // Debug.Log("VerifyFood");
         Comida();
-        Debug.Log("VerifySaude");
+        // Debug.Log("VerifySaude");
         Saude();
-        Debug.Log("VerifySocial");
+        // Debug.Log("VerifySocial");
         Social();
         Debug.Log("Wait");
         yield return new WaitForSeconds(GameConstants.timerToCheckInSeconds);
@@ -105,9 +105,9 @@ public class SistemaComedouroScript : MonoBehaviour
         }
 
 
-        print("Check Saude");
-        Debug.Log("SAUDE DO COMEDOURO:" + healthComedouro);
-        Debug.Log(numBirds + " now and " + numBirdsThatPassedTodayWithoutCleaning + " birds today");
+        // print("Check Saude");
+        // Debug.Log("SAUDE DO COMEDOURO:" + healthComedouro);
+        // Debug.Log(numBirds + " now and " + numBirdsThatPassedTodayWithoutCleaning + " birds today");
     }
 
     void Social()
@@ -135,8 +135,8 @@ public class SistemaComedouroScript : MonoBehaviour
             setPlaying(false);
         }
 
-        print("Check Social");
-        Debug.Log("SOCIAL DO COMEDOURO:" + socialComedouro);
+        // print("Check Social");
+        // Debug.Log("SOCIAL DO COMEDOURO:" + socialComedouro);
     }
 
     public void setPlaying(bool play)

@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -3120730603551926074, guid: 86ad3a1e80f4bf445a2e2cc9a2634fea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7561eb9f82173477ea9d73d008416357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food1: {fileID: 0}
-  food2: {fileID: 0}
-  food3: {fileID: 0}
-  food4: {fileID: 0}
+  food1: {fileID: -3120730603551926074, guid: 86ad3a1e80f4bf445a2e2cc9a2634fea, type: 3}
+  food2: {fileID: 8825907884645483951, guid: 86ad3a1e80f4bf445a2e2cc9a2634fea, type: 3}
+  food3: {fileID: -9211019987572867793, guid: 86ad3a1e80f4bf445a2e2cc9a2634fea, type: 3}
+  food4: {fileID: 621127007532356092, guid: 86ad3a1e80f4bf445a2e2cc9a2634fea, type: 3}

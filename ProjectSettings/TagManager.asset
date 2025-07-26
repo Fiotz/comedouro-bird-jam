@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Comida
   - Passaro
+  - SpawnComida
+  - SpawnPassaro
   layers:
   - Default
   - TransparentFX
@@ -40,14 +42,8 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
-    uniqueID: 218501969
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Frente
-    uniqueID: 1598240023
     locked: 0
   m_RenderingLayers:
   - Default
