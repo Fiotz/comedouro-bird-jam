@@ -8839,6 +8839,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7015543151371029194, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -8982,6 +8986,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7015543151371029194, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -9125,6 +9133,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7015543151371029194, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -9268,6 +9280,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -221098953467419119, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -9610,6 +9626,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -221098953467419119, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -9758,6 +9778,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -221098953467419119, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10082,6 +10106,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7015543151371029194, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10229,6 +10257,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7015543151371029194, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10373,6 +10405,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7015543151371029194, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10518,6 +10554,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -221098953467419119, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10663,6 +10703,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -221098953467419119, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10808,6 +10852,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7015543151371029194, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10955,6 +11003,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7015543151371029194, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -11401,6 +11453,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7015543151371029194, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -11521,7 +11577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1486582929788414081, guid: 61f0937b52fb4b648bf52eb44db4ece5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -158.5
+      value: -317.54
       objectReference: {fileID: 0}
     - target: {fileID: 1486582929788414081, guid: 61f0937b52fb4b648bf52eb44db4ece5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11683,6 +11739,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7015543151371029194, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -11962,6 +12022,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7791753300644281532, guid: bdd873d04c5be3242a8145c75ba53e59, type: 3}
+    - target: {fileID: 5246404367812930754, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6137751615146598627, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_Sprite
       value: 
