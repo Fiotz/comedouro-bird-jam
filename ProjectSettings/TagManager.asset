@@ -42,8 +42,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 315899733
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Frente
+    uniqueID: 97642941
     locked: 0
   m_RenderingLayers:
   - Default
