@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &5959040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 370947017250960016, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+  m_PrefabInstance: {fileID: 1635864371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &32585215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -205,6 +210,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5745805390075091847, guid: 87f20e0949e4f7d4ba4598aeddc4392b, type: 3}
   m_PrefabInstance: {fileID: 2030478213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &186008949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3102935689296204118, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+  m_PrefabInstance: {fileID: 1635864371}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &228367199
 PrefabInstance:
@@ -684,6 +694,9 @@ MonoBehaviour:
   comedouroController: {fileID: 713977091}
   passarinhoController: {fileID: 1176894848}
   diarioHud: {fileID: 1366815425}
+  informacaoHud: {fileID: 5959040}
+  botoesHud: {fileID: 788050116}
+  pauseHud: {fileID: 186008949}
 --- !u!4 &736325474
 Transform:
   m_ObjectHideFlags: 0
@@ -756,6 +769,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87f20e0949e4f7d4ba4598aeddc4392b, type: 3}
+--- !u!1 &788050116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1819384395891127687, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+  m_PrefabInstance: {fileID: 1635864371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &811689403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5745805390075091847, guid: 87f20e0949e4f7d4ba4598aeddc4392b, type: 3}
@@ -1021,6 +1039,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 370947017250960016, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 488134618863353080, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1152,6 +1174,10 @@ PrefabInstance:
     - target: {fileID: 1617550205683188821, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1819384395891127687, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2223436531613357317, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

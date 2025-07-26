@@ -10,6 +10,9 @@ public class SistemaPesquisador : MonoBehaviour
 
     [SerializeField, Header("Diario")]
     public GameObject diarioHud;
+    public GameObject informacaoHud;
+    public GameObject botoesHud;
+    public GameObject pauseHud;
 
     private float hoursPassed = 0;
     private int daysPassed = 0;
