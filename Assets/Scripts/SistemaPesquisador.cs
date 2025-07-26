@@ -156,10 +156,11 @@ public class SistemaPesquisador : MonoBehaviour
 
     public void pause()
     {
+        isPlaying = !isPlaying;
+        Debug.Log("Pause - isPlaying: " + isPlaying);
         comedouroController.GetComponent<SistemaComedouroScript>().pause();
         passarinhoController.GetComponent<SistemaPassarinho>().pause();
-        isPlaying = !isPlaying;
-        pauseHud.SetActive(!pauseHud.activeSelf);
+        pauseHud.SetActive(true);
     }
 
     public void GameOver()

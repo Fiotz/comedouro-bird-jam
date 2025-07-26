@@ -189,5 +189,6 @@ public class SistemaComedouroScript : MonoBehaviour
     public void pause()
     {
         isPlaying = !isPlaying;
+        Debug.Log("PauseComedouro - isPlaying: " + isPlaying);
     }
 }

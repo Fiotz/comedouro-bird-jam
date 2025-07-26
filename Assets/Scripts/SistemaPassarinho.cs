@@ -147,5 +147,6 @@ public class SistemaPassarinho : MonoBehaviour
     public void pause()
     {
         isPlaying = !isPlaying;
+        Debug.Log("PausePassarinho - isPlaying: " + isPlaying);
     }
 }
