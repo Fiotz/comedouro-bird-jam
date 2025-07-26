@@ -43,5 +43,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Passarinhos
+    uniqueID: 1640255319
+    locked: 0
+  - name: Frente
+    uniqueID: 1051637005
+    locked: 0
   m_RenderingLayers:
   - Default
