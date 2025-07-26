@@ -681,6 +681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd18fa4d48b5644cebb19c92eb11ee2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  comedouroController: {fileID: 713977091}
+  passarinhoController: {fileID: 1176894848}
+  diarioHud: {fileID: 1366815425}
 --- !u!4 &736325474
 Transform:
   m_ObjectHideFlags: 0
@@ -950,6 +953,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4042263678427570709, guid: 87f20e0949e4f7d4ba4598aeddc4392b, type: 3}
   m_PrefabInstance: {fileID: 1181455900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1366815425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6572425816842151067, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+  m_PrefabInstance: {fileID: 1635864371}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1560703126 stripped
 GameObject:

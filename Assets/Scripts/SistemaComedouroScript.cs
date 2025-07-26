@@ -167,17 +167,27 @@ public class SistemaComedouroScript : MonoBehaviour
     public void endOfTheDay()
     {
         GameObject[] foodFound = GameObject.FindGameObjectsWithTag("Comida");
-
+        isPlaying = false;
         if (foodFound.Length > 0)
         {
             // Trigger Destroy Comedouro por animais a noite!
         }
-        
+
         healthComedouro = GameConstants.maxHealthForComedouro;
         socialComedouro = GameConstants.maxSocialForComedouro;
         healthSlider.maxValue = healthComedouro;
         healthSlider.value = healthComedouro;
         socialSlider.maxValue = socialComedouro;
         socialSlider.value = socialComedouro;
+    }
+
+    public void startTheDay()
+    {
+        isPlaying = true;
+    }
+
+    public void pause()
+    {
+        isPlaying = !isPlaying;
     }
 }

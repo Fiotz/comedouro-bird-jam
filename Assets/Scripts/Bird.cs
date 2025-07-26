@@ -7,12 +7,16 @@ public class Bird : MonoBehaviour
 
     public bool isSpecialBird = false;
 
+    public string nameOfBird = "semNome";
+
     private float timeOfExistenceInSeconds = 0;
 
     void Awake()
     {
         GameObject[] foundBirds = GameObject.FindGameObjectsWithTag("Passaro");
         bool hasSpecialBird = false;
+        nameOfBird = this.name.Split("(")[0];
+        Debug.Log(nameOfBird);
         // Verificar o nome do objeto!
         foreach (GameObject bird in foundBirds)
         {

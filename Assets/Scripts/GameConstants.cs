@@ -3,9 +3,11 @@ using UnityEngine;
 public static class GameConstants
 {
     // ========================= Timers Constants ===========================
+    public static readonly float oneHourInSeconds = 1.0f;
+
     public static readonly float timerToCheckInSeconds = 3.0f;
 
-    public static readonly float maxTimeDaySeconds = 50f;
+    public static readonly float maxTimeDaySeconds = 15.0f;
 
     public static readonly float foodTimeToExpireInSeconds = 10f;
 

@@ -35,6 +35,8 @@ public class SistemaPassarinho : MonoBehaviour
 
     private List<int> usageArray = new List<int>();
 
+    private bool isPlaying = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,7 +46,7 @@ public class SistemaPassarinho : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canSpawn)  //check if we can spawn (coroutine handles true/false)
+        if (canSpawn && isPlaying)  //check if we can spawn (coroutine handles true/false)
         {
             StartCoroutine(SpawnBirdsRoutine());  //start a Coroutine
         }
@@ -130,5 +132,20 @@ public class SistemaPassarinho : MonoBehaviour
             Instantiate(foodObj, spawnLivres[position].transform.position, Quaternion.identity, spawnLivres[position].transform);
             Instantiate(saira7cores, spawnLivres[position].transform.position, Quaternion.identity, spawnLivres[position].transform);
         }
+    }
+
+    public void endOfTheDay()
+    {
+        isPlaying = false;
+    }
+
+    public void startTheDay()
+    {
+        isPlaying = true;
+    }
+
+    public void pause()
+    {
+        isPlaying = !isPlaying;
     }
 }
