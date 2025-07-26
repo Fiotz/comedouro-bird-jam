@@ -19,8 +19,23 @@ public class Food : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-        this.GetComponent<SpriteRenderer>().sprite = food1;
+        int chance = Random.Range(0, 100);
+        if (chance < 25)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = food1;
+        }
+        else if (chance < 50)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = food2;
+        }
+        else if (chance < 75)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = food3;
+        }
+        else
+        {
+            this.GetComponent<SpriteRenderer>().sprite = food4;
+        }
     }
 
     // Update is called once per frame

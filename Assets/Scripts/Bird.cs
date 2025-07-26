@@ -13,20 +13,22 @@ public class Bird : MonoBehaviour
 
     void Awake()
     {
+        // Pega todos os Passaros
         GameObject[] foundBirds = GameObject.FindGameObjectsWithTag("Passaro");
         bool hasSpecialBird = false;
         nameOfBird = this.name.Split("(")[0];
         Debug.Log(nameOfBird);
-        // Verificar o nome do objeto!
+        // Verificar o nome do objeto! pra ver se existe algum outro bird desse nome que tem anilha
         foreach (GameObject bird in foundBirds)
         {
-            if (bird.GetComponent<Bird>().isSpecialBird)
+            if (bird.GetComponent<Bird>().isSpecialBird && bird.name.Split("(")[0] == nameOfBird)
             {
                 // VerificarNomeDoPassaro!
                 // Se nao for o memso passaro entao pode ser especial
                 hasSpecialBird = true;
             }
         }
+        // Se nao tiver anilha 50% de ter anilha
         if (!hasSpecialBird)
         {
             int specialChance = Random.Range(0, 100);
@@ -36,6 +38,11 @@ public class Bird : MonoBehaviour
                 isSpecialBird = true;
                 Debug.Log("ESPECIAL!!!!!!!");
             }
+        }
+        else
+        {
+            Anilha.SetActive(false);
+            isSpecialBird = false;
         }
     }
 

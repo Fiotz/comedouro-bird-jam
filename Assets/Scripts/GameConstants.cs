@@ -11,6 +11,12 @@ public static class GameConstants
 
     public static readonly float foodTimeToExpireInSeconds = 10f;
 
+    public static readonly int daysForLevelOne = 5;
+
+    public static readonly int daysForLevelTwo = 10;
+
+    public static readonly int daysForLevelThree = 15;
+
     // ========================= Size Birds =================================
     public static readonly int smallBird = 1;
     public static readonly int mediumBird = 1;

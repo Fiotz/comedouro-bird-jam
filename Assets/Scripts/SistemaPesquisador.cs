@@ -20,11 +20,11 @@ public class SistemaPesquisador : MonoBehaviour
 
     private int saira7coresComAnilhas = 0;
 
-    private int sairaMilitar = 0;
+    private int sairaMilitarComAnilhas = 0;
 
-    private int tiePreto = 0;
+    private int tiePretoComAnilhas = 0;
 
-    private int sanhaco = 0;
+    private int sanhacoComAnilhas = 0;
 
     private bool isPlaying = true;
 
@@ -61,6 +61,8 @@ public class SistemaPesquisador : MonoBehaviour
             comedouroController.GetComponent<SistemaComedouroScript>().endOfTheDay();
             passarinhoController.GetComponent<SistemaPassarinho>().endOfTheDay();
             daysPassed++;
+            informacaoHud.SetActive(false);
+            botoesHud.SetActive(false);
             diarioHud.SetActive(true);
         }
     }
@@ -75,6 +77,40 @@ public class SistemaPesquisador : MonoBehaviour
             {
                 string typeOfBird = scriptBird.nameOfBird;
                 // if ()
+                switch (typeOfBird)
+                {
+                    case "saira7cores":
+                        if (saira7coresComAnilhas == 0)
+                        {
+                            Debug.Log("PRIMEIRA AVE ENCONTRADA");
+                        }
+                        saira7coresComAnilhas++;
+                        break;
+                    case "sairaMilitar":
+                        if (sairaMilitarComAnilhas == 0)
+                        {
+                            Debug.Log("PRIMEIRA AVE ENCONTRADA");
+                        }
+                        sairaMilitarComAnilhas++;
+                        break;
+                    case "tie":
+                        if (tiePretoComAnilhas == 0)
+                        {
+                            Debug.Log("PRIMEIRA AVE ENCONTRADA");
+                        }
+                        tiePretoComAnilhas++;
+                        break;
+                    case "sanhaco":
+                        if (sanhacoComAnilhas == 0)
+                        {
+                            Debug.Log("PRIMEIRA AVE ENCONTRADA");
+                        }
+                        sanhacoComAnilhas++;
+                        break;
+                    default:
+                        Debug.Log("Nao foi encontrado nenhum passaro com esse nome. VERIFICAR!!!!");
+                        break;
+                }
             }
         }
     }
@@ -89,11 +125,41 @@ public class SistemaPesquisador : MonoBehaviour
         return level;
     }
 
+    public void toNextDay()
+    {
+        verifyLevel();
+        diarioHud.SetActive(false);
+        informacaoHud.SetActive(true);
+        botoesHud.SetActive(true);
+        comedouroController.GetComponent<SistemaComedouroScript>().startTheDay();
+        passarinhoController.GetComponent<SistemaPassarinho>().startTheDay();
+    }
+
+    public void verifyLevel() {
+        if (daysPassed >= GameConstants.daysForLevelOne && daysPassed < GameConstants.daysForLevelTwo)
+        {
+            Debug.Log("PARABENS, Voce chegou ao LVL One");
+            level++;
+        }
+        else if (daysPassed >= GameConstants.daysForLevelTwo && daysPassed < GameConstants.daysForLevelThree)
+        {
+            Debug.Log("PARABENS, Voce chegou ao LVL Two");
+            level++;
+        }
+        else if (daysPassed >= GameConstants.daysForLevelThree)
+        {
+            Debug.Log("PARABENS, Voce chegou ao LVL Three");
+            level++;
+        }
+    }
+
+
     public void pause()
     {
         comedouroController.GetComponent<SistemaComedouroScript>().pause();
         passarinhoController.GetComponent<SistemaPassarinho>().pause();
         isPlaying = !isPlaying;
+        pauseHud.SetActive(!pauseHud.activeSelf);
     }
 
     public void GameOver()
