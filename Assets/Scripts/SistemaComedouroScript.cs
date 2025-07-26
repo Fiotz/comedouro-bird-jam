@@ -67,7 +67,7 @@ public class SistemaComedouroScript : MonoBehaviour
     void Saude()
     {
         GameObject[] findBirds = GameObject.FindGameObjectsWithTag("Passaro");
-        numBirds = Random.Range(1, 11); // findBirds.Length;
+        numBirds = findBirds.Length;
         numBirdsThatPassedToday += numBirds;
         healthComedouro -= numBirds * GameConstants.multiplyHealthPerBirdExistent;
         healthComedouro -= numBirdsThatPassedToday * GameConstants.multiplyHealthPerBirdThatHasPass;
@@ -102,6 +102,7 @@ public class SistemaComedouroScript : MonoBehaviour
         else
         {
             socialComedouro += numBirds * GameConstants.increaseSocialByNumBirds;
+            if (socialComedouro > 100) socialComedouro = 100;
         }
 
         if (healthComedouro < 50)
@@ -139,7 +140,7 @@ public class SistemaComedouroScript : MonoBehaviour
         {
             bird.GetComponent<Bird>().destroyBird();
         }
-                
+
         healthComedouro = GameConstants.maxHealthForComedouro;
         healthSlider.maxValue = healthComedouro;
         healthSlider.value = healthComedouro;

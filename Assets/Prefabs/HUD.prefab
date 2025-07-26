@@ -535,7 +535,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1623042521735703962, guid: 199dda4c0ae9bbc4fbf5552cf4cc8fc7, type: 3}
       propertyPath: m_Name
-      value: SaudeSlider
+      value: SocialSlider
       objectReference: {fileID: 0}
     - target: {fileID: 1788476878916716371, guid: 199dda4c0ae9bbc4fbf5552cf4cc8fc7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -599,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7489447602065268491, guid: 199dda4c0ae9bbc4fbf5552cf4cc8fc7, type: 3}
       propertyPath: m_Name
-      value: "Sa\xFAde"
+      value: Social
       objectReference: {fileID: 0}
     - target: {fileID: 8265619362469741113, guid: 199dda4c0ae9bbc4fbf5552cf4cc8fc7, type: 3}
       propertyPath: m_Pivot.x
@@ -699,6 +699,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5759259397391343257}
     m_Modifications:
+    - target: {fileID: 1623042521735703962, guid: 199dda4c0ae9bbc4fbf5552cf4cc8fc7, type: 3}
+      propertyPath: m_Name
+      value: ComidaSlider
+      objectReference: {fileID: 0}
     - target: {fileID: 1788476878916716371, guid: 199dda4c0ae9bbc4fbf5552cf4cc8fc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -997,6 +1001,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5759259397391343257}
     m_Modifications:
+    - target: {fileID: 1623042521735703962, guid: 199dda4c0ae9bbc4fbf5552cf4cc8fc7, type: 3}
+      propertyPath: m_Name
+      value: SaudeSlider
+      objectReference: {fileID: 0}
     - target: {fileID: 1788476878916716371, guid: 199dda4c0ae9bbc4fbf5552cf4cc8fc7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1039,7 +1047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7489447602065268491, guid: 199dda4c0ae9bbc4fbf5552cf4cc8fc7, type: 3}
       propertyPath: m_Name
-      value: Limpeza
+      value: Saude
       objectReference: {fileID: 0}
     - target: {fileID: 8265619362469741113, guid: 199dda4c0ae9bbc4fbf5552cf4cc8fc7, type: 3}
       propertyPath: m_Pivot.x

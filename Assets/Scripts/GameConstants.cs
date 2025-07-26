@@ -16,6 +16,10 @@ public static class GameConstants
 
 
     // ========================= Health Constants ==========================
+    public static readonly int chanceLvlTwoBirdOne = 70;
+
+
+    // ========================= Health Constants ==========================
     public static readonly float multiplyHealthPerBirdExistent = 1f;
 
     public static readonly float multiplyHealthPerBirdThatHasPass = 0.5f;
