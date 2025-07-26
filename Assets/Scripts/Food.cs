@@ -2,8 +2,18 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
+    [SerializeField, Header("Foods")]
+    public Sprite food1;
+    public Sprite food2;
+    public Sprite food3;
+    public Sprite food4;
+
     private float timeOfExistenceInSeconds = 0;
 
+    void Awake()
+    {
+        // Adicionar random da lista de foods 
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,16 +29,15 @@ public class Food : MonoBehaviour
     public void updateTimeOfExistence(float passTime)
     {
         timeOfExistenceInSeconds += passTime;
-        checkExpiredFood();
     }
 
-    private void checkExpiredFood()
+    public bool isExpired()
     {
         print("Add Function to expire Food if pass a threshold");
-    }
-
-    public void destroyFood()
-    {
-        Destroy(this);
+        if (timeOfExistenceInSeconds > GameConstants.foodTimeToExpireInSeconds)
+        {
+            return true;
+        }
+        return false;
     }
 }

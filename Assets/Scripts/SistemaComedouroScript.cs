@@ -16,7 +16,7 @@ public class SistemaComedouroScript : MonoBehaviour
 
     private float socialComedouro;
 
-    private int numBirdsThatPassedToday = 0;
+    private int numBirdsThatPassedTodayWithoutCleaning = 0;
 
     private int numBirds;
 
@@ -47,9 +47,13 @@ public class SistemaComedouroScript : MonoBehaviour
     IEnumerator VerifyStatusRoutine()
     {
         canCheckStatus = false;
+        Debug.Log("VerifyFood");
         Comida();
+        Debug.Log("VerifySaude");
         Saude();
+        Debug.Log("VerifySocial");
         Social();
+        Debug.Log("Wait");
         yield return new WaitForSeconds(GameConstants.timerToCheckInSeconds);
         canCheckStatus = true;
     }
@@ -60,6 +64,10 @@ public class SistemaComedouroScript : MonoBehaviour
         foreach (GameObject food in foodFound)
         {
             food.GetComponent<Food>().updateTimeOfExistence(GameConstants.timerToCheckInSeconds);
+            if (food.GetComponent<Food>().isExpired())
+            {
+                Destroy(food, 1);
+            }
         }
         print("Check Comida");
     }
@@ -68,9 +76,18 @@ public class SistemaComedouroScript : MonoBehaviour
     {
         GameObject[] findBirds = GameObject.FindGameObjectsWithTag("Passaro");
         numBirds = findBirds.Length;
-        numBirdsThatPassedToday += numBirds;
+        numBirdsThatPassedTodayWithoutCleaning += numBirds;
         healthComedouro -= numBirds * GameConstants.multiplyHealthPerBirdExistent;
-        healthComedouro -= numBirdsThatPassedToday * GameConstants.multiplyHealthPerBirdThatHasPass;
+        healthComedouro -= numBirdsThatPassedTodayWithoutCleaning * GameConstants.multiplyHealthPerBirdThatHasPass;
+
+        foreach (GameObject bird in findBirds)
+        {
+            bird.GetComponent<Bird>().updateTimeOfExistence(GameConstants.timerToCheckInSeconds);
+            if (bird.GetComponent<Bird>().isExpired())
+            {
+                Destroy(bird, 1);
+            }
+        }
 
         healthSlider.value = healthComedouro;
         if (healthComedouro <= 0)
@@ -90,7 +107,7 @@ public class SistemaComedouroScript : MonoBehaviour
 
         print("Check Saude");
         Debug.Log("SAUDE DO COMEDOURO:" + healthComedouro);
-        Debug.Log(numBirds + " now and " + numBirdsThatPassedToday + " birds today");
+        Debug.Log(numBirds + " now and " + numBirdsThatPassedTodayWithoutCleaning + " birds today");
     }
 
     void Social()
@@ -134,16 +151,17 @@ public class SistemaComedouroScript : MonoBehaviour
 
         foreach (GameObject food in foodFound)
         {
-            food.GetComponent<Food>().destroyFood();
+            Destroy(food);
         }
         foreach (GameObject bird in birdsFound)
         {
-            bird.GetComponent<Bird>().destroyBird();
+            Destroy(bird);
         }
 
         healthComedouro = GameConstants.maxHealthForComedouro;
         healthSlider.maxValue = healthComedouro;
         healthSlider.value = healthComedouro;
+        numBirdsThatPassedTodayWithoutCleaning = 0;
     }
 
     public void endOfTheDay()

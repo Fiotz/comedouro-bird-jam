@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SistemaPassarinho : MonoBehaviour
 {
+    [SerializeField, Header("Food")]
+    public GameObject foodObj;
 
     [SerializeField, Header("SpawnPoints")]
     public GameObject spawn1;
@@ -21,18 +23,18 @@ public class SistemaPassarinho : MonoBehaviour
     public GameObject sanhacoDoEncontroAzul;
 
 
-    private int food = 0;
-
-    private int birds = 0;
+    private int foodNum = 0;
 
     private bool canSpawn = false;
 
     private int level;
 
+    private bool hasViewOneSanhaco = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        level = 0;
+        level = 1;
     }
 
     // Update is called once per frame
@@ -56,24 +58,41 @@ public class SistemaPassarinho : MonoBehaviour
         if (isFoodEnougth())
         {
             int chanceOfBird = Random.Range(0, 100);
-            if (level == 1)
+            GameObject chooseSpawn = Random.Range(0, 100) < 50 ? spawn1 : spawn2;
+            if (chanceOfBird < GameConstants.chanceOfSanhaco && !hasViewOneSanhaco)
             {
-                Instantiate(saira7cores, transform.position, Quaternion.identity);
+                Instantiate(sanhacoDoEncontroAzul, chooseSpawn.transform.position, Quaternion.identity);
+                hasViewOneSanhaco = true;
+            }
+            else if (level == 1)
+            {
+                Instantiate(saira7cores, chooseSpawn.transform.position, Quaternion.identity);
             }
             else if (level == 2)
             {
                 if (chanceOfBird < GameConstants.chanceLvlTwoBirdOne)
                 {
-
+                    Instantiate(saira7cores, chooseSpawn.transform.position, Quaternion.identity);
                 }
                 else
                 {
-                    
+                    Instantiate(sairaMilitar, chooseSpawn.transform.position, Quaternion.identity);
                 }
-             }
+            }
             else
             {
-
+                if (chanceOfBird < GameConstants.chanceLvlThreeBirdOne)
+                {
+                    Instantiate(saira7cores, chooseSpawn.transform.position, Quaternion.identity);
+                }
+                else if (chanceOfBird < GameConstants.chanceLvlThreeBirdTwo)
+                {
+                    Instantiate(sairaMilitar, chooseSpawn.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(sanhacoDoEncontroAzul, chooseSpawn.transform.position, Quaternion.identity);
+                }
             }
         }
     }
@@ -81,11 +100,12 @@ public class SistemaPassarinho : MonoBehaviour
     private bool isFoodEnougth()
     {
         // math to see if we have food for new birds
-        return false;
+        return true;
     }
 
     public void createFood()
     {
-        
+        Instantiate(foodObj, stayPoint[stayPoint.Length - 1].transform.position, Quaternion.identity);
+        Instantiate(saira7cores, stayPoint[stayPoint.Length - 1].transform.position, Quaternion.identity);
     }
 }
