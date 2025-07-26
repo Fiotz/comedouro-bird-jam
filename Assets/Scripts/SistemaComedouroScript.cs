@@ -20,6 +20,8 @@ public class SistemaComedouroScript : MonoBehaviour
 
     private int numBirds;
 
+    private int numCleanUsesToday = 0;
+
     void Awake()
     {
         healthComedouro = GameConstants.maxHealthForComedouro;
@@ -146,22 +148,26 @@ public class SistemaComedouroScript : MonoBehaviour
 
     public void cleanComedouro()
     {
-        GameObject[] foodFound = GameObject.FindGameObjectsWithTag("Comida");
-        GameObject[] birdsFound = GameObject.FindGameObjectsWithTag("Passaro");
-
-        foreach (GameObject food in foodFound)
+        if (numCleanUsesToday <= GameConstants.numMaxCleanUsesPerDay)
         {
-            Destroy(food);
-        }
-        foreach (GameObject bird in birdsFound)
-        {
-            Destroy(bird);
-        }
+            GameObject[] foodFound = GameObject.FindGameObjectsWithTag("Comida");
+            GameObject[] birdsFound = GameObject.FindGameObjectsWithTag("Passaro");
 
-        healthComedouro = GameConstants.maxHealthForComedouro;
-        healthSlider.maxValue = healthComedouro;
-        healthSlider.value = healthComedouro;
-        numBirdsThatPassedTodayWithoutCleaning = 0;
+            foreach (GameObject food in foodFound)
+            {
+                Destroy(food);
+            }
+            foreach (GameObject bird in birdsFound)
+            {
+                Destroy(bird);
+            }
+
+            healthComedouro = GameConstants.maxHealthForComedouro;
+            healthSlider.maxValue = healthComedouro;
+            healthSlider.value = healthComedouro;
+            numBirdsThatPassedTodayWithoutCleaning = 0;
+            numCleanUsesToday++;
+        }
     }
 
     public void endOfTheDay()
@@ -170,6 +176,7 @@ public class SistemaComedouroScript : MonoBehaviour
         isPlaying = false;
         if (foodFound.Length > 0)
         {
+            GameObject.FindGameObjectWithTag("PesquisadorController").GetComponent<SistemaPesquisador>().setGameOver = true;
             // Trigger Destroy Comedouro por animais a noite!
         }
 
@@ -179,6 +186,7 @@ public class SistemaComedouroScript : MonoBehaviour
         healthSlider.value = healthComedouro;
         socialSlider.maxValue = socialComedouro;
         socialSlider.value = socialComedouro;
+        numCleanUsesToday = 0;
     }
 
     public void startTheDay()

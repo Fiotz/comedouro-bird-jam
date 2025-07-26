@@ -11,6 +11,10 @@ public class Bird : MonoBehaviour
 
     private float timeOfExistenceInSeconds = 0;
 
+    private bool canMove = true;
+
+    private float speed = 3.0f;
+
     void Awake()
     {
         // Pega todos os Passaros
@@ -49,13 +53,33 @@ public class Bird : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (canMove)
+        {
+            MoveToParent();
+        }
+    }
 
+    public void MoveToParent()
+    {
+        Vector3 targetPosition = transform.parent.position;
+
+            // Move the child towards the parent's position
+            // Use Vector3.MoveTowards for consistent linear speed
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+
+        // Optional: You might want to stop moving when very close to avoid jittering
+        if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
+        {
+            canMove = false;
+            // Optionally snap to the parent's position or stop movement
+            // transform.position = targetPosition;
+            // enabled = false; // Disable the script
+        }
     }
     
     public void updateTimeOfExistence(float passTime)

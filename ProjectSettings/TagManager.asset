@@ -9,6 +9,9 @@ TagManager:
   - SpawnComida
   - SpawnPassaro
   - Audio
+  - ComedouroController
+  - PassarinhoController
+  - PesquisadorController
   layers:
   - Default
   - TransparentFX

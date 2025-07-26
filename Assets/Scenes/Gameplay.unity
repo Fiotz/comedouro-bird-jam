@@ -201,6 +201,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &77452598 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 139797758141563944, guid: 0be1739f3e9e6834da52ed4702f4abb4, type: 3}
+  m_PrefabInstance: {fileID: 1823326993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &118160255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4042263678427570709, guid: 87f20e0949e4f7d4ba4598aeddc4392b, type: 3}
@@ -701,7 +706,7 @@ GameObject:
   - component: {fileID: 713977092}
   m_Layer: 0
   m_Name: ComedouroController
-  m_TagString: Untagged
+  m_TagString: ComedouroController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -747,7 +752,7 @@ GameObject:
   - component: {fileID: 736325473}
   m_Layer: 0
   m_Name: PesquisadorController
-  m_TagString: Untagged
+  m_TagString: PesquisadorController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -770,6 +775,11 @@ MonoBehaviour:
   informacaoHud: {fileID: 5959040}
   botoesHud: {fileID: 788050116}
   pauseHud: {fileID: 186008949}
+  bgHud: {fileID: 77452598}
+  saira7coresComAnilhas: 0
+  sairaMilitarComAnilhas: 0
+  tiePretoComAnilhas: 0
+  sanhacoComAnilhas: 0
 --- !u!4 &736325474
 Transform:
   m_ObjectHideFlags: 0
@@ -799,7 +809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4042263678427570709, guid: 87f20e0949e4f7d4ba4598aeddc4392b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9582695
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4042263678427570709, guid: 87f20e0949e4f7d4ba4598aeddc4392b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -866,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4042263678427570709, guid: 87f20e0949e4f7d4ba4598aeddc4392b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9582695
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4042263678427570709, guid: 87f20e0949e4f7d4ba4598aeddc4392b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -931,7 +941,7 @@ GameObject:
   - component: {fileID: 1176894849}
   m_Layer: 0
   m_Name: PassarinhoController
-  m_TagString: Untagged
+  m_TagString: PassarinhoController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1264,6 +1274,18 @@ PrefabInstance:
     - target: {fileID: 599374535288188579, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 716039387364212432, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 736325473}
+    - target: {fileID: 716039387364212432, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: registeringBirds
+      objectReference: {fileID: 0}
+    - target: {fileID: 716039387364212432, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SistemaPesquisador, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 850843061603626828, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1848,6 +1870,34 @@ PrefabInstance:
     - target: {fileID: 6141043951207723546, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266561103752050562, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266561103752050562, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266561103752050562, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 736325473}
+    - target: {fileID: 6266561103752050562, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266561103752050562, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: toNextDay
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266561103752050562, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SistemaPesquisador, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266561103752050562, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6267183923322216839, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
       propertyPath: m_AnchorMax.y

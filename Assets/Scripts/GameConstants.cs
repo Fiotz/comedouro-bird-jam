@@ -3,13 +3,18 @@ using UnityEngine;
 public static class GameConstants
 {
     // ========================= Timers Constants ===========================
-    public static readonly float oneHourInSeconds = 1.0f;
+    public static readonly int numMaxCleanUsesPerDay = 3;
 
-    public static readonly float timerToCheckInSeconds = 3.0f;
+    public static readonly int numMaxResearchUsesPerDay = 3;
 
-    public static readonly float maxTimeDaySeconds = 15.0f;
+    // ========================= Timers Constants ===========================
+    public static readonly float oneHourInSeconds = 5.0f;
 
-    public static readonly float foodTimeToExpireInSeconds = 10f;
+    public static readonly float timerToCheckInSeconds = 1.0f;
+
+    public static readonly float maxTimeDaySeconds = 60.0f;
+
+    public static readonly float foodTimeToExpireInSeconds = 5.0f;
 
     public static readonly int daysForLevelOne = 5;
 
@@ -24,7 +29,7 @@ public static class GameConstants
 
 
     // ========================= Health Constants ==========================
-    public static readonly int chanceOfSanhaco = 5;
+    public static readonly int chanceOfSairaSorte = 5;
 
     public static readonly int chanceLvlTwoBirdOne = 70;
 
@@ -43,9 +48,9 @@ public static class GameConstants
     // ========================= Social Constants ==========================
     public static readonly float maxSocialForComedouro = 100f;
 
-    public static readonly int numBirdsSocialGoodMin = 4;
+    public static readonly int numBirdsSocialGoodMin = 3;
 
-    public static readonly int numBirdsSocialGoodMax = 6;
+    public static readonly int numBirdsSocialGoodMax = 5;
 
     public static readonly int maxNumberBirds = 10;
 
