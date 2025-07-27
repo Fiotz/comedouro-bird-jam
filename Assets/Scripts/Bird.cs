@@ -48,6 +48,11 @@ public class Bird : MonoBehaviour
             Anilha.SetActive(false);
             isSpecialBird = false;
         }
+        GetComponent<Animator>().Play("voando");
+        if (transform.position.x > transform.parent.position.x)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -76,6 +81,7 @@ public class Bird : MonoBehaviour
         if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
         {
             canMove = false;
+            GetComponent<Animator>().Play("sa[ira");
             // Optionally snap to the parent's position or stop movement
             // transform.position = targetPosition;
             // enabled = false; // Disable the script

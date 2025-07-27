@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class SistemaPesquisador : MonoBehaviour
@@ -16,6 +17,10 @@ public class SistemaPesquisador : MonoBehaviour
 
     [SerializeField, Header("BG")]
     public GameObject bgHud;
+
+    [SerializeField, Header("Text")]
+    public TMP_Text text1;
+    public TMP_Text text2;
 
     private float hoursPassed = 0;
     private int daysPassed = 0;
@@ -39,7 +44,8 @@ public class SistemaPesquisador : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        text1.SetText(GameConstants.numMaxResearchUsesPerDay.ToString());
+        text2.SetText(GameConstants.numMaxResearchUsesPerDay.ToString());
     }
 
     // Update is called once per frame
@@ -61,6 +67,7 @@ public class SistemaPesquisador : MonoBehaviour
     private void checkDay()
     {
         hoursPassed += GameConstants.oneHourInSeconds;
+        // Debug.Log(hoursPassed);
         if (hoursPassed > GameConstants.maxTimeDaySeconds)
         {
             bgHud.GetComponent<Animator>().speed = 0;
@@ -83,6 +90,8 @@ public class SistemaPesquisador : MonoBehaviour
         if (registroPesquisaHoje <= GameConstants.numMaxResearchUsesPerDay)
         {
             registroPesquisaHoje++;
+            text1.SetText((GameConstants.numMaxResearchUsesPerDay - registroPesquisaHoje).ToString());
+
             GameObject[] foundBirds = GameObject.FindGameObjectsWithTag("Passaro");
             foreach (GameObject bird in foundBirds)
             {
@@ -163,6 +172,14 @@ public class SistemaPesquisador : MonoBehaviour
             canAddHour = true;
             // Reseta Numero de Limpeza e Registros
             registroPesquisaHoje = 0;
+            text1.SetText(GameConstants.numMaxResearchUsesPerDay.ToString());
+            Debug.Log("LEVEL ATUA: " + level + "\n" +
+            "Saira 7 cores: " + saira7coresComAnilhas + "\n" + 
+            "SairaSorte: " + sairaMilitarComAnilhas + "\n" + 
+            "TIE: " + tiePretoComAnilhas + "\n" + 
+            "Sanhaco: " + sanhacoComAnilhas + "\n" + 
+            "DIAS: " + daysPassed + "\n" + 
+            "");
         }
     }
 
@@ -170,17 +187,17 @@ public class SistemaPesquisador : MonoBehaviour
         if (daysPassed == GameConstants.daysForLevelOne && (saira7coresComAnilhas + sairaMilitarComAnilhas) > 3)
         {
             Debug.Log("PARABENS, Voce chegou ao LVL One");
-            level++;
+            level = 1;
         }
-        else if (daysPassed == GameConstants.daysForLevelTwo && (tiePretoComAnilhas + saira7coresComAnilhas + sairaMilitarComAnilhas) > 6 )
+        else if (daysPassed == GameConstants.daysForLevelTwo && (tiePretoComAnilhas + saira7coresComAnilhas + sairaMilitarComAnilhas) > 6)
         {
             Debug.Log("PARABENS, Voce chegou ao LVL Two");
-            level++;
+            level = 2;
         }
         else if (daysPassed >= GameConstants.daysForLevelThree && (tiePretoComAnilhas + saira7coresComAnilhas + sairaMilitarComAnilhas) > 9)
         {
             Debug.Log("PARABENS, Voce chegou ao LVL Three");
-            level++;
+            level = 3;
         }
     }
 

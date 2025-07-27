@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class SistemaPassarinho : MonoBehaviour
@@ -15,32 +16,31 @@ public class SistemaPassarinho : MonoBehaviour
     [SerializeField, Header("StayPoins")]
     public GameObject[] stayPoint = new GameObject[8];
 
-    // [SerializeField, Header("ObjParentsBirds")]
-    // public GameObject allBirds;
+    [SerializeField, Header("Text")]
+    public TMP_Text text1;
 
     [SerializeField, Header("Bird")]
     public GameObject saira7cores;
+    public GameObject saira7cores_1;
+    public GameObject saira7cores_2;
     public GameObject sairaMilitar;
     public GameObject tiePreto;
     public GameObject sanhacoDoEncontroAzul;
 
-
-    private int foodNum = 0;
-
-    private bool canSpawn = false;
+    // private bool canSpawn = false;
 
     private int level;
 
     private bool hasViewOneSanhaco = false;
 
-    private List<int> usageArray = new List<int>();
+    // private List<int> usageArray = new List<int>();
 
     private bool isPlaying = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        text1.SetText("8");
     }
 
     // Update is called once per frame
@@ -58,6 +58,23 @@ public class SistemaPassarinho : MonoBehaviour
     //     yield return new WaitForSeconds(GameConstants.timerToCheckInSeconds);  //wait for X amount of time
     // }
 
+    private void SpawnSaira(GameObject chooseSpawn, Transform parent)
+    {
+        int randomSaira = Random.Range(0, 99);
+        if (randomSaira < 33)
+        {
+            Instantiate(saira7cores, chooseSpawn.transform.position, Quaternion.identity, parent);
+        }
+        else if (randomSaira < 66)
+        {
+            Instantiate(saira7cores_1, chooseSpawn.transform.position, Quaternion.identity, parent);
+        }
+        else
+        {
+            Instantiate(saira7cores_2, chooseSpawn.transform.position, Quaternion.identity, parent);
+        }
+    }
+
     private void SpawnBird(Transform parent) //Spawn object (Bird) function
     {
         int chanceOfBird = Random.Range(0, 100);
@@ -69,28 +86,28 @@ public class SistemaPassarinho : MonoBehaviour
         }
         else if (level <= 0)
         {
-            Instantiate(saira7cores, chooseSpawn.transform.position, Quaternion.identity, parent);
+            SpawnSaira(chooseSpawn, parent);
         }
         else if (level == 1)
         {
             if (chanceOfBird < GameConstants.chanceLvlTwoBirdOne)
             {
-                Instantiate(saira7cores, chooseSpawn.transform.position, Quaternion.identity, parent);
+                SpawnSaira(chooseSpawn, parent);
             }
             else
             {
-                Instantiate(sairaMilitar, chooseSpawn.transform.position, Quaternion.identity, parent);
+                Instantiate(tiePreto, chooseSpawn.transform.position, Quaternion.identity, parent);
             }
         }
         else
         {
             if (chanceOfBird < GameConstants.chanceLvlThreeBirdOne)
             {
-                Instantiate(saira7cores, chooseSpawn.transform.position, Quaternion.identity, parent);
+                SpawnSaira(chooseSpawn, parent);
             }
             else if (chanceOfBird < GameConstants.chanceLvlThreeBirdTwo)
             {
-                Instantiate(sairaMilitar, chooseSpawn.transform.position, Quaternion.identity, parent);
+                Instantiate(tiePreto, chooseSpawn.transform.position, Quaternion.identity, parent);
             }
             else
             {
@@ -122,6 +139,7 @@ public class SistemaPassarinho : MonoBehaviour
             Debug.Log("Creating food in position: " + position);
             createFoodAndBird(spawnLivres[position].transform);
         }
+        text1.SetText(spawnLivres.Count().ToString());
     }
 
     public void createFoodAndBird(Transform spawn)

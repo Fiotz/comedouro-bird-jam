@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,10 @@ public class SistemaComedouroScript : MonoBehaviour
     [SerializeField, Header("Sliders")]
     public Slider healthSlider;
     public Slider socialSlider;
+
+    [SerializeField, Header("Text")]
+    public TMP_Text text1;
+    public TMP_Text text2;
 
     private bool canCheckStatus = true;
     private bool isPlaying = true;
@@ -34,6 +39,9 @@ public class SistemaComedouroScript : MonoBehaviour
         healthSlider.value = healthComedouro;
         socialSlider.maxValue = socialComedouro;
         socialSlider.value = socialComedouro;
+
+        text1.SetText(GameConstants.numMaxCleanUsesPerDay.ToString());
+        text2.SetText(GameConstants.numMaxCleanUsesPerDay.ToString());
     }
 
     // Update is called once per frame
@@ -150,6 +158,7 @@ public class SistemaComedouroScript : MonoBehaviour
     {
         if (numCleanUsesToday <= GameConstants.numMaxCleanUsesPerDay)
         {
+
             GameObject[] foodFound = GameObject.FindGameObjectsWithTag("Comida");
             GameObject[] birdsFound = GameObject.FindGameObjectsWithTag("Passaro");
 
@@ -167,6 +176,7 @@ public class SistemaComedouroScript : MonoBehaviour
             healthSlider.value = healthComedouro;
             numBirdsThatPassedTodayWithoutCleaning = 0;
             numCleanUsesToday++;
+            text1.SetText((GameConstants.numMaxCleanUsesPerDay - numCleanUsesToday).ToString());
         }
     }
 
@@ -179,7 +189,7 @@ public class SistemaComedouroScript : MonoBehaviour
             GameObject.FindGameObjectWithTag("PesquisadorController").GetComponent<SistemaPesquisador>().setGameOver = true;
             // Trigger Destroy Comedouro por animais a noite!
         }
-
+        cleanComedouro();
         healthComedouro = GameConstants.maxHealthForComedouro;
         socialComedouro = GameConstants.maxSocialForComedouro;
         healthSlider.maxValue = healthComedouro;
