@@ -275,6 +275,13 @@ public class SistemaPesquisador : MonoBehaviour
         alertaPesquisaAtualizada.SetActive(false);
     }
 
+    IEnumerator alertaDeMudancaDia()
+    {
+        alertaMudancaDeDia.SetActive(true);
+        yield return new WaitForSeconds(2);
+        alertaMudancaDeDia.SetActive(false);
+    }
+
     public int getDaysPassed()
     {
         return daysPassed;
@@ -314,6 +321,7 @@ public class SistemaPesquisador : MonoBehaviour
             "DIAS: " + daysPassed + "\n" +
             "");
             inDiario = false;
+            StartCoroutine(alertaDeMudancaDia());
         }
     }
 
