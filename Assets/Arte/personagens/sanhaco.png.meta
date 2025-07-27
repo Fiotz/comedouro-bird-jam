@@ -211,9 +211,9 @@ TextureImporter:
       name: sanhaco_10
       rect:
         serializedVersion: 2
-        x: 403
+        x: 395
         y: 82
-        width: 200
+        width: 222
         height: 464
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -233,9 +233,9 @@ TextureImporter:
       name: sanhaco_11
       rect:
         serializedVersion: 2
-        x: 807
+        x: 796
         y: 81
-        width: 200
+        width: 222
         height: 464
       alignment: 7
       pivot: {x: 0.5, y: 0}

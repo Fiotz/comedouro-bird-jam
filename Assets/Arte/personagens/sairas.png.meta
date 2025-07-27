@@ -268,9 +268,9 @@ TextureImporter:
       name: sairas_10
       rect:
         serializedVersion: 2
-        x: 85
+        x: 41
         y: 449
-        width: 117
+        width: 222
         height: 326
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -290,9 +290,9 @@ TextureImporter:
       name: sairas_11
       rect:
         serializedVersion: 2
-        x: 366
+        x: 316
         y: 449
-        width: 116
+        width: 222
         height: 326
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -312,9 +312,9 @@ TextureImporter:
       name: sairas_12
       rect:
         serializedVersion: 2
-        x: 843
+        x: 799
         y: 449
-        width: 119
+        width: 222
         height: 326
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -334,9 +334,9 @@ TextureImporter:
       name: sairas_13
       rect:
         serializedVersion: 2
-        x: 1124
+        x: 1076
         y: 449
-        width: 116
+        width: 222
         height: 326
       alignment: 7
       pivot: {x: 0.5, y: 0}
