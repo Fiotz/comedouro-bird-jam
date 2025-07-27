@@ -152,6 +152,7 @@ public class SistemaComedouroScript : MonoBehaviour
             if (firstTimeSaude)
             {
                 StartCoroutine(ShowAlertaSaude());
+                firstTimeSaude = false;
             }
         }
 
@@ -187,7 +188,8 @@ public class SistemaComedouroScript : MonoBehaviour
                 showReacaoInBirds(3);
                 if (firstTimeSocial)
                 {
-                    StartCoroutine(ShowAlertaSaude());
+                    StartCoroutine(ShowAlertaSocial());
+                    firstTimeSocial = false;
                 }
             }
         }
@@ -255,7 +257,7 @@ public class SistemaComedouroScript : MonoBehaviour
     {
         GameObject[] foodFound = GameObject.FindGameObjectsWithTag("Comida");
         isPlaying = false;
-        if (foodFound.Length > 0)
+        if (foodFound.Length > 0 && healthComedouro < 50)
         {
             GameObject.FindGameObjectWithTag("PesquisadorController").GetComponent<SistemaPesquisador>().defineGameOver("noturno");
             GameObject.FindGameObjectWithTag("PesquisadorController").GetComponent<SistemaPesquisador>().setGameOver = true;
@@ -276,9 +278,9 @@ public class SistemaComedouroScript : MonoBehaviour
         isPlaying = true;
     }
 
-    public void pause()
+    public void pause(bool play)
     {
-        isPlaying = !isPlaying;
+        isPlaying = play;
         Debug.Log("PauseComedouro - isPlaying: " + isPlaying);
     }
 }

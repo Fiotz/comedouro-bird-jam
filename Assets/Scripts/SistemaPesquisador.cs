@@ -72,20 +72,22 @@ public class SistemaPesquisador : MonoBehaviour
         text2.SetText(GameConstants.numMaxResearchUsesPerDay.ToString());
         isPlaying = !isPlaying;
         Debug.Log("Pause - isPlaying: " + isPlaying);
-        comedouroController.GetComponent<SistemaComedouroScript>().pause();
-        passarinhoController.GetComponent<SistemaPassarinho>().pause();
+        comedouroController.GetComponent<SistemaComedouroScript>().pause(isPlaying);
+        passarinhoController.GetComponent<SistemaPassarinho>().pause(isPlaying);
         StartCoroutine(startGame());
     }
 
     IEnumerator startGame()
     {
         Tutorial.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        bgHud.GetComponent<Animator>().speed = 0;
+        yield return new WaitForSeconds(6f);
+        bgHud.GetComponent<Animator>().speed = 1;
         Tutorial.SetActive(false);
         isPlaying = !isPlaying;
         Debug.Log("Pause - isPlaying: " + isPlaying);
-        comedouroController.GetComponent<SistemaComedouroScript>().pause();
-        passarinhoController.GetComponent<SistemaPassarinho>().pause();
+        comedouroController.GetComponent<SistemaComedouroScript>().pause(isPlaying);
+        passarinhoController.GetComponent<SistemaPassarinho>().pause(isPlaying);
     }
 
     // Update is called once per frame
@@ -136,8 +138,10 @@ public class SistemaPesquisador : MonoBehaviour
             }
             for (int i = 0; i < sairaMilitarComAnilhas; i++)
             {
-                if (i < popupSorte.transform.childCount) popupSorte.transform.GetChild(popupSorte.transform.childCount - i - 1).gameObject.SetActive(true);
-                else poemaSorte.SetActive(true);
+                if (i < popupSorte.transform.childCount) {
+                    popupSorte.transform.GetChild(popupSorte.transform.childCount - i - 1).gameObject.SetActive(true);
+                    poemaSorte.SetActive(true);
+                }
             }
         }
         else
@@ -258,11 +262,11 @@ public class SistemaPesquisador : MonoBehaviour
             registroPesquisaHoje = 0;
             text1.SetText(GameConstants.numMaxResearchUsesPerDay.ToString());
             Debug.Log("LEVEL ATUA: " + level + "\n" +
-            "Saira 7 cores: " + saira7coresComAnilhas + "\n" + 
-            "SairaSorte: " + sairaMilitarComAnilhas + "\n" + 
-            "TIE: " + tiePretoComAnilhas + "\n" + 
-            "Sanhaco: " + sanhacoComAnilhas + "\n" + 
-            "DIAS: " + daysPassed + "\n" + 
+            "Saira 7 cores: " + saira7coresComAnilhas + "\n" +
+            "SairaSorte: " + sairaMilitarComAnilhas + "\n" +
+            "TIE: " + tiePretoComAnilhas + "\n" +
+            "Sanhaco: " + sanhacoComAnilhas + "\n" +
+            "DIAS: " + daysPassed + "\n" +
             "");
         }
     }
@@ -288,11 +292,21 @@ public class SistemaPesquisador : MonoBehaviour
 
     public void pause()
     {
-        isPlaying = !isPlaying;
+        bgHud.GetComponent<Animator>().speed = 0;
+        isPlaying = false;
         Debug.Log("Pause - isPlaying: " + isPlaying);
-        comedouroController.GetComponent<SistemaComedouroScript>().pause();
-        passarinhoController.GetComponent<SistemaPassarinho>().pause();
+        comedouroController.GetComponent<SistemaComedouroScript>().pause(isPlaying);
+        passarinhoController.GetComponent<SistemaPassarinho>().pause(isPlaying);
         pauseHud.SetActive(true);
+    }
+
+    public void continueJogo(){
+        isPlaying = true;
+        Debug.Log("Pause - isPlaying: " + isPlaying);
+        comedouroController.GetComponent<SistemaComedouroScript>().pause(isPlaying);
+        passarinhoController.GetComponent<SistemaPassarinho>().pause(isPlaying);
+        pauseHud.SetActive(false);
+        bgHud.GetComponent<Animator>().speed = 1;
     }
 
     public void defineGameOver(string over)

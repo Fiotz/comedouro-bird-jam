@@ -104,6 +104,10 @@ public class SistemaPassarinho : MonoBehaviour
         }
         else if (level == 1)
         {
+            if (chanceOfBird < (2 * GameConstants.chanceOfSairaSorte))
+            {
+                Instantiate(sanhacoDoEncontroAzul, chooseSpawn.transform.position, Quaternion.identity, parent);
+            }
             if (chanceOfBird < GameConstants.chanceLvlTwoBirdOne)
             {
                 SpawnSaira(chooseSpawn, parent);
@@ -172,9 +176,9 @@ public class SistemaPassarinho : MonoBehaviour
         isPlaying = true;
     }
 
-    public void pause()
+    public void pause(bool play)
     {
-        isPlaying = !isPlaying;
+        isPlaying = play;
         Debug.Log("PausePassarinho - isPlaying: " + isPlaying);
     }
 }

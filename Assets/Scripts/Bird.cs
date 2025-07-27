@@ -52,7 +52,7 @@ public class Bird : MonoBehaviour
         if (!hasSpecialBird)
         {
             int specialChance = Random.Range(0, 100);
-            if (specialChance < 50)
+            if (specialChance < 50 || nameOfBird == "sairaMilitar")
             {
                 Anilha.SetActive(true);
                 isSpecialBird = true;

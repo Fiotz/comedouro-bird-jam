@@ -20,7 +20,14 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void toMainMenu(){
+    public void toMainMenu()
+    {
         SceneManager.LoadScene(0);
+    }
+
+    public void leaveGame()
+    {
+        Debug.Log("Leaving Game");
+        Application.Quit();
     }
 }

@@ -31,16 +31,16 @@ public static class GameConstants
     // ========================= Health Constants ==========================
     public static readonly int chanceOfSairaSorte = 5;
 
-    public static readonly int chanceLvlTwoBirdOne = 70;
+    public static readonly int chanceLvlTwoBirdOne = 55;
 
     public static readonly int chanceLvlThreeBirdOne = 40;
 
     public static readonly int chanceLvlThreeBirdTwo = 70;
 
     // ========================= Health Constants ==========================
-    public static readonly float multiplyHealthPerBirdExistent = 1f;
+    public static readonly float multiplyHealthPerBirdExistent = 0.5f;
 
-    public static readonly float multiplyHealthPerBirdThatHasPass = 0.5f;
+    public static readonly float multiplyHealthPerBirdThatHasPass = 0.2f;
 
     public static readonly float maxHealthForComedouro = 100f;
 
