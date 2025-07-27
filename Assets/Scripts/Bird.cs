@@ -29,6 +29,8 @@ public class Bird : MonoBehaviour
 
     public bool movingToParent = true;
 
+    AudioManager audioManager;
+
     void Awake()
     {
         // Pega todos os Passaros
@@ -83,6 +85,24 @@ public class Bird : MonoBehaviour
     void Start()
     {
         posInit = transform.position;
+        switch (nameOfBird)
+        {
+            case "saira7cores":
+                audioManager.playSFX(audioManager.setecores);
+                break;
+            case "sairaMilitar":
+                audioManager.playSFX(audioManager.sorte);
+                break;
+            case "tie":
+                audioManager.playSFX(audioManager.tiepreto);
+                break;
+            case "sanhaco":
+                audioManager.playSFX(audioManager.sanhaco);
+                break;
+            default:
+                Debug.Log("Nao foi encontrado nenhum passaro com esse nome. VERIFICAR!!!!");
+                break;
+        }
     }
 
     // Update is called once per frame

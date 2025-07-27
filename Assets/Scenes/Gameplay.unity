@@ -3340,6 +3340,22 @@ PrefabInstance:
       propertyPath: sliderMusic
       value: 
       objectReference: {fileID: 1635864373}
+    - target: {fileID: 5507014738248572574, guid: 5b0cda8c7703f4c2f855df9abee068cb, type: 3}
+      propertyPath: sorte
+      value: 
+      objectReference: {fileID: 8300000, guid: eacc873e6d7208143b5ab6eb65378b77, type: 3}
+    - target: {fileID: 5507014738248572574, guid: 5b0cda8c7703f4c2f855df9abee068cb, type: 3}
+      propertyPath: sanhaco
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d5a97f015947ad4d85aaeac8b121168, type: 3}
+    - target: {fileID: 5507014738248572574, guid: 5b0cda8c7703f4c2f855df9abee068cb, type: 3}
+      propertyPath: tiepreto
+      value: 
+      objectReference: {fileID: 8300000, guid: e446fc2ddd2453d4c9c9589b3288739d, type: 3}
+    - target: {fileID: 5507014738248572574, guid: 5b0cda8c7703f4c2f855df9abee068cb, type: 3}
+      propertyPath: setecores
+      value: 
+      objectReference: {fileID: 8300000, guid: 82f5a22204ac50645a39f9dca6f04ae7, type: 3}
     - target: {fileID: 7186921246374733800, guid: 5b0cda8c7703f4c2f855df9abee068cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 413
