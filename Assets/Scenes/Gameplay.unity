@@ -1945,6 +1945,14 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3916029161646672799, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
+      propertyPath: m_text
+      value: "S\xE3o realmente sete cores: Cabe\xE7a, nuca e queixo: turquesa. Manto:
+        verde-amarelo. Ombros, cauda, olhos e penas de voo: preto. Coberteiras: azul-violeta.
+        Borda da cauda: verde-claro. Asas: Verde-p\xE1lido. A s\xE9tima cor \xE9
+        a mais vibrante e a mais escondida. Urop\xEDgio: amarelo-alaranjado. Como
+        um sol brilhante."
+      objectReference: {fileID: 0}
     - target: {fileID: 3943143813548715661, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
       propertyPath: m_IsActive
       value: 0
