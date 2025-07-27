@@ -14,6 +14,10 @@ public class SistemaComedouroScript : MonoBehaviour
     public TMP_Text text1;
     public TMP_Text text2;
 
+    [SerializeField, Header("Alerta")]
+    public GameObject alertaCriticoSocial;
+    public GameObject alertaCriticoSaude;
+
     private bool canCheckStatus = true;
     private bool isPlaying = true;
 
@@ -28,6 +32,10 @@ public class SistemaComedouroScript : MonoBehaviour
     private int numCleanUsesToday = 0;
 
     private bool showReacao = true;
+
+    private bool firstTimeSocial = true;
+
+    private bool firstTimeSaude = true;
 
     void Awake()
     {
@@ -128,6 +136,8 @@ public class SistemaComedouroScript : MonoBehaviour
         if (healthComedouro <= 0)
         {
             print("Voce Perdeu, Passarinhos Doentes!");
+            GameObject.FindGameObjectWithTag("PesquisadorController").GetComponent<SistemaPesquisador>().defineGameOver("saude");
+            GameObject.FindGameObjectWithTag("PesquisadorController").GetComponent<SistemaPesquisador>().setGameOver = true;
             setPlaying(false);
         }
         else if (healthComedouro < 25)
@@ -139,6 +149,10 @@ public class SistemaComedouroScript : MonoBehaviour
         {
             print("Comedouro Sujo");
             showReacaoInBirds(2);
+            if (firstTimeSaude)
+            {
+                StartCoroutine(ShowAlertaSaude());
+            }
         }
 
 
@@ -147,12 +161,35 @@ public class SistemaComedouroScript : MonoBehaviour
         // Debug.Log(numBirds + " now and " + numBirdsThatPassedTodayWithoutCleaning + " birds today");
     }
 
+    IEnumerator ShowAlertaSaude()
+    {
+        firstTimeSaude = false;
+        alertaCriticoSaude.SetActive(true);
+        yield return new WaitForSeconds(2);
+        alertaCriticoSaude.SetActive(false);
+    }
+
+    IEnumerator ShowAlertaSocial()
+    {
+        firstTimeSocial = false;
+        alertaCriticoSocial.SetActive(true);
+        yield return new WaitForSeconds(2);
+        alertaCriticoSocial.SetActive(false);
+    }
+
     void Social()
     {
         if (numBirds < GameConstants.numBirdsSocialGoodMin || numBirds > GameConstants.numBirdsSocialGoodMax)
         {
             socialComedouro -= numBirds * GameConstants.decreaseSocialByNumBirds;
-            if(numBirds > GameConstants.numBirdsSocialGoodMax) showReacaoInBirds(3);
+            if (numBirds > GameConstants.numBirdsSocialGoodMax)
+            {
+                showReacaoInBirds(3);
+                if (firstTimeSocial)
+                {
+                    StartCoroutine(ShowAlertaSaude());
+                }
+            }
         }
         else
         {
@@ -170,7 +207,10 @@ public class SistemaComedouroScript : MonoBehaviour
         if (socialComedouro <= 0)
         {
             print("Voce Perdeu, Passarinhos Não aparecem mais!");
+
             setPlaying(false);
+            GameObject.FindGameObjectWithTag("PesquisadorController").GetComponent<SistemaPesquisador>().defineGameOver("social");
+            GameObject.FindGameObjectWithTag("PesquisadorController").GetComponent<SistemaPesquisador>().setGameOver = true;
         }
 
         // print("Check Social");
@@ -217,6 +257,7 @@ public class SistemaComedouroScript : MonoBehaviour
         isPlaying = false;
         if (foodFound.Length > 0)
         {
+            GameObject.FindGameObjectWithTag("PesquisadorController").GetComponent<SistemaPesquisador>().defineGameOver("noturno");
             GameObject.FindGameObjectWithTag("PesquisadorController").GetComponent<SistemaPesquisador>().setGameOver = true;
             // Trigger Destroy Comedouro por animais a noite!
         }

@@ -25,6 +25,16 @@ public class SistemaPesquisador : MonoBehaviour
     public GameObject popupSorte;
     public GameObject poemaSorte;
 
+    [SerializeField, Header("Alertas e GameOver")]
+    public GameObject gameOverSaude;
+    public GameObject gameOverSocial;
+    public GameObject gameOverComedouroSujo;
+    public GameObject alertaPrimeiroPassaro;
+    public GameObject alertaPesquisaAtualizada;
+    public GameObject alertaMudancaDeDia;
+    public GameObject Tutorial;
+
+
     [SerializeField, Header("BG")]
     public GameObject bgHud;
 
@@ -51,11 +61,28 @@ public class SistemaPesquisador : MonoBehaviour
     private int registroPesquisaHoje = 0;
 
     public bool setGameOver = false;
+    public string gameOver = "";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         text1.SetText(GameConstants.numMaxResearchUsesPerDay.ToString());
         text2.SetText(GameConstants.numMaxResearchUsesPerDay.ToString());
+        isPlaying = !isPlaying;
+        Debug.Log("Pause - isPlaying: " + isPlaying);
+        comedouroController.GetComponent<SistemaComedouroScript>().pause();
+        passarinhoController.GetComponent<SistemaPassarinho>().pause();
+        StartCoroutine(startGame());
+    }
+
+    IEnumerator startGame()
+    {
+        Tutorial.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        Tutorial.SetActive(false);
+        isPlaying = !isPlaying;
+        Debug.Log("Pause - isPlaying: " + isPlaying);
+        comedouroController.GetComponent<SistemaComedouroScript>().pause();
+        passarinhoController.GetComponent<SistemaPassarinho>().pause();
     }
 
     // Update is called once per frame
@@ -129,19 +156,21 @@ public class SistemaPesquisador : MonoBehaviour
                 if (scriptBird.isSpecialBird)
                 {
                     string typeOfBird = scriptBird.nameOfBird;
-                    // if ()
+                    StartCoroutine(alertaPesquisa());
                     switch (typeOfBird)
                     {
                         case "saira7cores":
                             if (saira7coresComAnilhas == 0)
                             {
                                 Debug.Log("PRIMEIRA AVE ENCONTRADA SAIRA");
+                                NovoPassaro();
                             }
                             saira7coresComAnilhas++;
                             break;
                         case "sairaMilitar":
                             if (sairaMilitarComAnilhas == 0)
                             {
+                                NovoPassaro();
                                 Debug.Log("PRIMEIRA AVE ENCONTRADA SORTE");
                             }
                             sairaMilitarComAnilhas++;
@@ -149,6 +178,7 @@ public class SistemaPesquisador : MonoBehaviour
                         case "tie":
                             if (tiePretoComAnilhas == 0)
                             {
+                                NovoPassaro();
                                 Debug.Log("PRIMEIRA AVE ENCONTRADA TIE");
                             }
                             tiePretoComAnilhas++;
@@ -156,6 +186,7 @@ public class SistemaPesquisador : MonoBehaviour
                         case "sanhaco":
                             if (sanhacoComAnilhas == 0)
                             {
+                                NovoPassaro();
                                 Debug.Log("PRIMEIRA AVE ENCONTRADA SANHACO");
                             }
                             sanhacoComAnilhas++;
@@ -171,6 +202,24 @@ public class SistemaPesquisador : MonoBehaviour
         {
             Debug.Log("Max Use per Day!!!!!");
         }
+    }
+    public void NovoPassaro()
+    {
+        StartCoroutine(newBird());
+    }
+
+    IEnumerator newBird()
+    {
+        alertaPrimeiroPassaro.SetActive(true);
+        yield return new WaitForSeconds(1);
+        alertaPrimeiroPassaro.SetActive(false);
+    }
+
+    IEnumerator alertaPesquisa()
+    {
+        alertaPesquisaAtualizada.SetActive(true);
+        yield return new WaitForSeconds(1);
+        alertaPesquisaAtualizada.SetActive(false);
     }
 
     public int getDaysPassed()
@@ -241,8 +290,27 @@ public class SistemaPesquisador : MonoBehaviour
         pauseHud.SetActive(true);
     }
 
+    public void defineGameOver(string over)
+    {
+        gameOver = over;
+    }
+
     public void GameOver()
     {
         Debug.Log("Game Over");
+        switch (gameOver)
+        {
+            case "social":
+                gameOverSocial.SetActive(true);
+                break;
+            case "noturno":
+                gameOverComedouroSujo.SetActive(true);
+                break;
+            case "saude":
+                gameOverSaude.SetActive(true);
+                break;
+            default:
+                break;
+        }
     }
 }
