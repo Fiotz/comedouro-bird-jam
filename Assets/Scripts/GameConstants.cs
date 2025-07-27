@@ -8,11 +8,11 @@ public static class GameConstants
     public static readonly int numMaxResearchUsesPerDay = 3;
 
     // ========================= Timers Constants ===========================
-    public static readonly float oneHourInSeconds = 5.0f;
+    public static readonly float oneHourInSeconds = 2.5f;
 
     public static readonly float timerToCheckInSeconds = 1.0f;
 
-    public static readonly float maxTimeDaySeconds = 10.0f;
+    public static readonly float maxTimeDaySeconds = 30.0f;
 
     public static readonly float foodTimeToExpireInSeconds = 5.0f;
 

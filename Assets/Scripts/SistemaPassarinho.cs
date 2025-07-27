@@ -25,6 +25,7 @@ public class SistemaPassarinho : MonoBehaviour
     public GameObject saira7cores_2;
     public GameObject sairaMilitar;
     public GameObject tiePreto;
+    public GameObject tiePreto2;
     public GameObject sanhacoDoEncontroAzul;
 
     // private bool canSpawn = false;
@@ -75,6 +76,19 @@ public class SistemaPassarinho : MonoBehaviour
         }
     }
 
+    private void SpawnTiePreto(GameObject chooseSpawn, Transform parent)
+    {
+        int randomSaira = Random.Range(0, 99);
+        if (randomSaira < 50)
+        {
+            Instantiate(tiePreto, chooseSpawn.transform.position, Quaternion.identity, parent);
+        }
+        else
+        {
+            Instantiate(tiePreto2, chooseSpawn.transform.position, Quaternion.identity, parent);
+        }
+    }
+
     private void SpawnBird(Transform parent) //Spawn object (Bird) function
     {
         int chanceOfBird = Random.Range(0, 100);
@@ -96,7 +110,7 @@ public class SistemaPassarinho : MonoBehaviour
             }
             else
             {
-                Instantiate(tiePreto, chooseSpawn.transform.position, Quaternion.identity, parent);
+                SpawnTiePreto(chooseSpawn, parent);
             }
         }
         else
@@ -107,7 +121,7 @@ public class SistemaPassarinho : MonoBehaviour
             }
             else if (chanceOfBird < GameConstants.chanceLvlThreeBirdTwo)
             {
-                Instantiate(tiePreto, chooseSpawn.transform.position, Quaternion.identity, parent);
+                SpawnTiePreto(chooseSpawn, parent);
             }
             else
             {

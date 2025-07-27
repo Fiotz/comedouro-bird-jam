@@ -4,6 +4,7 @@ public class Bird : MonoBehaviour
 {
     [SerializeField, Header("Anilha")]
     public GameObject Anilha;
+    public GameObject AnilhaFilha;
 
     public bool isSpecialBird = false;
 
@@ -13,7 +14,7 @@ public class Bird : MonoBehaviour
 
     private bool canMove = true;
 
-    private float speed = 3.0f;
+    private float speed = 6.0f;
 
     void Awake()
     {
@@ -52,6 +53,8 @@ public class Bird : MonoBehaviour
         if (transform.position.x > transform.parent.position.x)
         {
             GetComponent<SpriteRenderer>().flipX = true;
+            Anilha.GetComponent<SpriteRenderer>().flipX = true;
+            AnilhaFilha.GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 

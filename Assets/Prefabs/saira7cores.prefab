@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anilha: {fileID: 4149133193176087741}
+  AnilhaFilha: {fileID: 4205939114117389635}
   isSpecialBird: 0
   nameOfBird: semNome
 --- !u!95 &1002025548255339565
