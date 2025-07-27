@@ -69,6 +69,7 @@ public class SistemaPesquisador : MonoBehaviour
 
     private float timeElapsed = 0.0f;
     private bool dayOrNight = true;
+    private bool inDiario = false;
 
     AudioManager audioManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -104,14 +105,14 @@ public class SistemaPesquisador : MonoBehaviour
         {
             StartCoroutine(PassedHour());
         }
-        if (isPlaying && dayOrNight)
+        if (isPlaying && dayOrNight && !inDiario)
         {
             timeElapsed += Time.deltaTime;
 
             // Calculate the new volume using Lerp for smooth transition
             // Mathf.Clamp01 ensures the interpolation value stays between 0 and 1
             float currentVolume = Mathf.Lerp(0f, 1f, timeElapsed / (GameConstants.maxTimeDaySeconds / 2));
-            Debug.Log(currentVolume);
+            // Debug.Log(currentVolume);
             diaNoite.GetComponent<Volume>().weight = 1 - currentVolume;
 
             // Optional: Stop updating once the target volume is reached
@@ -121,14 +122,14 @@ public class SistemaPesquisador : MonoBehaviour
                 timeElapsed = 0;
             }
         }
-        if (isPlaying && !dayOrNight)
+        if (isPlaying && !dayOrNight && !inDiario)
         {
             timeElapsed += Time.deltaTime;
 
             // Calculate the new volume using Lerp for smooth transition
             // Mathf.Clamp01 ensures the interpolation value stays between 0 and 1
             float currentVolume = Mathf.Lerp(0f, 1f, timeElapsed / (GameConstants.maxTimeDaySeconds / 2));
-            Debug.Log(currentVolume);
+            // Debug.Log(currentVolume);
             diaNoite.GetComponent<Volume>().weight = currentVolume;
 
             // Optional: Stop updating once the target volume is reached
@@ -162,6 +163,9 @@ public class SistemaPesquisador : MonoBehaviour
             informacaoHud.SetActive(false);
             botoesHud.SetActive(false);
             diarioHud.SetActive(true);
+            inDiario = true;
+            timeElapsed = 0;
+            diaNoite.GetComponent<Volume>().weight = 1;
             for (int i = 0; i < saira7coresComAnilhas; i++)
             {
                 if (i < popupSaira.transform.childCount) popupSaira.transform.GetChild(popupSaira.transform.childCount - i - 1).gameObject.SetActive(true);
@@ -309,6 +313,7 @@ public class SistemaPesquisador : MonoBehaviour
             "Sanhaco: " + sanhacoComAnilhas + "\n" +
             "DIAS: " + daysPassed + "\n" +
             "");
+            inDiario = false;
         }
     }
 
