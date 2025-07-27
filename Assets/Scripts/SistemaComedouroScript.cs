@@ -117,7 +117,10 @@ public class SistemaComedouroScript : MonoBehaviour
             bird.GetComponent<Bird>().updateTimeOfExistence(GameConstants.timerToCheckInSeconds);
             if (bird.GetComponent<Bird>().isExpired())
             {
-                Destroy(bird, 1);
+                bird.tag = "Untagged";
+                bird.GetComponent<Bird>().flipBird();
+                bird.GetComponent<Bird>().movingToParent = false;
+                bird.GetComponent<Bird>().canMove = true;
             }
         }
 
@@ -193,7 +196,10 @@ public class SistemaComedouroScript : MonoBehaviour
             }
             foreach (GameObject bird in birdsFound)
             {
-                Destroy(bird);
+                bird.tag = "Untagged";
+                bird.GetComponent<Bird>().flipBird();
+                bird.GetComponent<Bird>().movingToParent = false;
+                bird.GetComponent<Bird>().canMove = true;
             }
 
             healthComedouro = GameConstants.maxHealthForComedouro;

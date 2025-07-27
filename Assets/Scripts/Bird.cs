@@ -19,11 +19,15 @@ public class Bird : MonoBehaviour
 
     private float timeOfExistenceInSeconds = 0;
 
-    private bool canMove = true;
+    public bool canMove = true;
 
-    private float speed = 6.0f;
+    private float speed = 10.0f;
 
     private bool isShowingReacao = false;
+
+    private Vector3 posInit;
+
+    public bool movingToParent = true;
 
     void Awake()
     {
@@ -67,9 +71,18 @@ public class Bird : MonoBehaviour
         }
     }
 
+    public void flipBird()
+    {
+        GetComponent<Animator>().Play("voando");
+        GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+        Anilha.GetComponent<SpriteRenderer>().flipX = !Anilha.GetComponent<SpriteRenderer>().flipX;
+        AnilhaFilha.GetComponent<SpriteRenderer>().flipX = !AnilhaFilha.GetComponent<SpriteRenderer>().flipX;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        posInit = transform.position;
     }
 
     // Update is called once per frame
@@ -96,19 +109,38 @@ public class Bird : MonoBehaviour
     public void MoveToParent()
     {
         Vector3 targetPosition = transform.parent.position;
-
-        // Move the child towards the parent's position
-        // Use Vector3.MoveTowards for consistent linear speed
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-
-        // Optional: You might want to stop moving when very close to avoid jittering
-        if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
+        if (movingToParent)
         {
-            canMove = false;
-            GetComponent<Animator>().Play("sa[ira");
-            // Optionally snap to the parent's position or stop movement
-            // transform.position = targetPosition;
-            // enabled = false; // Disable the script
+            // Move the child towards the parent's position
+            // Use Vector3.MoveTowards for consistent linear speed
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+
+            // Optional: You might want to stop moving when very close to avoid jittering
+            if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
+            {
+                canMove = false;
+                GetComponent<Animator>().Play("sa[ira");
+                
+                // Optionally snap to the parent's position or stop movement
+                // transform.position = targetPosition;
+                // enabled = false; // Disable the script
+            }
+        }
+        else
+        {
+            // Move the child towards the parent's position
+            // Use Vector3.MoveTowards for consistent linear speed
+            transform.position = Vector3.MoveTowards(transform.position, posInit, speed * Time.deltaTime);
+
+            // Optional: You might want to stop moving when very close to avoid jittering
+            if (Vector3.Distance(transform.position, posInit) < 0.01f)
+            {
+                canMove = false;
+                Destroy(gameObject);
+                // Optionally snap to the parent's position or stop movement
+                // transform.position = targetPosition;
+                // enabled = false; // Disable the script
+            }
         }
     }
     

@@ -980,7 +980,7 @@ MonoBehaviour:
   saira7cores_2: {fileID: 5691698836374332228, guid: a62481e21591a45e49d01199be7b508e, type: 3}
   sairaMilitar: {fileID: 5653880023506515066, guid: 4a428462a8f5a441e970375758920677, type: 3}
   tiePreto: {fileID: 9180534756471664410, guid: dda6510dbed3f4d05a507608403d9f08, type: 3}
-  tiePreto2: {fileID: 0}
+  tiePreto2: {fileID: 767997831120971096, guid: c2154869863591b418fb55f84f67152f, type: 3}
   sanhacoDoEncontroAzul: {fileID: 1262825627987136651, guid: 7de2515ed709c49f799e15652188904c, type: 3}
 --- !u!4 &1176894850
 Transform:
