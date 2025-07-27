@@ -410,6 +410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 0}
   socialSlider: {fileID: 0}
+  text1: {fileID: 0}
+  text2: {fileID: 0}
 --- !u!1 &484668281810203191
 GameObject:
   m_ObjectHideFlags: 0
@@ -12898,13 +12900,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9162274930471203289, guid: 95b0976c0ceeaf24e973028d1096ca5c, type: 3}
       propertyPath: m_text
-      value: "Mais um registro para o projeto Pluma: um sanha\xE7o-de-encontro-azul.
-        Tem o mesmo tamanho do Ti\xEA-Preto, mas pesa mais, chegando a 43g. Tem o
-        corpinho mais cheio e compacto e o bico \xE9 mais grosso. \xC9 todo azul,
-        um pouco mais escuro em cima e mais claro na barriga. A palavra encontro
-        se refere \xE0 \xE1rea onde come\xE7a a asa, que leva esse nome. Parece o
-        mais forte dos que j\xE1 observei aqui. Ser\xE1 que \xE9 mais invocado tamb\xE9m?
-        N\xE3o vejo a hora de encontrar com ele de novo."
+      value: "Mais um registro para o projeto: um sanha\xE7o-de-encontro-azul. Tem
+        o mesmo tamanho do Ti\xEA-Preto, mas pesa mais, chegando a 43g. Tem o corpinho
+        mais cheio e compacto e o bico \xE9 mais grosso. \xC9 todo azul, um pouco
+        mais escuro em cima e mais claro na barriga. A palavra encontro se refere
+        \xE0 \xE1rea onde come\xE7a a asa, que leva esse nome. Parece o mais forte
+        dos que j\xE1 observei aqui. Ser\xE1 que \xE9 mais invocado tamb\xE9m? N\xE3o
+        vejo a hora de encontrar com ele de novo."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
