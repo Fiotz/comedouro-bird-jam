@@ -12,6 +12,30 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2f20cf1f1e83c0046872bdea23045d1e, type: 2}
+    - target: {fileID: 522336421987594394, guid: 7de2515ed709c49f799e15652188904c, type: 3}
+      propertyPath: m_Size.x
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 522336421987594394, guid: 7de2515ed709c49f799e15652188904c, type: 3}
+      propertyPath: m_Size.y
+      value: 3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 522336421987594394, guid: 7de2515ed709c49f799e15652188904c, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 522336421987594394, guid: 7de2515ed709c49f799e15652188904c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8980552
+      objectReference: {fileID: 0}
+    - target: {fileID: 522336421987594394, guid: 7de2515ed709c49f799e15652188904c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 522336421987594394, guid: 7de2515ed709c49f799e15652188904c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1262825627987136651, guid: 7de2515ed709c49f799e15652188904c, type: 3}
       propertyPath: m_Name
       value: sairaMilitar
@@ -54,6 +78,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1845444556486261101, guid: 7de2515ed709c49f799e15652188904c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3911466216285520444, guid: 7de2515ed709c49f799e15652188904c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
