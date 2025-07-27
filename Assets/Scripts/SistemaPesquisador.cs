@@ -2,9 +2,13 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class SistemaPesquisador : MonoBehaviour
 {
+    [SerializeField, Header("Globa")]
+    public GameObject diaNoite;
+
     [SerializeField, Header("Controllers")]
     public GameObject comedouroController;
     public GameObject passarinhoController;
@@ -63,6 +67,9 @@ public class SistemaPesquisador : MonoBehaviour
     public bool setGameOver = false;
     public string gameOver = "";
 
+    private float timeElapsed = 0.0f;
+    private bool dayOrNight = true;
+
     AudioManager audioManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -96,6 +103,40 @@ public class SistemaPesquisador : MonoBehaviour
         if (canAddHour && isPlaying)
         {
             StartCoroutine(PassedHour());
+        }
+        if (isPlaying && dayOrNight)
+        {
+            timeElapsed += Time.deltaTime;
+
+            // Calculate the new volume using Lerp for smooth transition
+            // Mathf.Clamp01 ensures the interpolation value stays between 0 and 1
+            float currentVolume = Mathf.Lerp(0f, 1f, timeElapsed / (GameConstants.maxTimeDaySeconds / 2));
+            Debug.Log(currentVolume);
+            diaNoite.GetComponent<Volume>().weight = 1 - currentVolume;
+
+            // Optional: Stop updating once the target volume is reached
+            if (timeElapsed >= (GameConstants.maxTimeDaySeconds / 2))
+            {
+                dayOrNight = false; // Disable the script to stop further updates
+                timeElapsed = 0;
+            }
+        }
+        if (isPlaying && !dayOrNight)
+        {
+            timeElapsed += Time.deltaTime;
+
+            // Calculate the new volume using Lerp for smooth transition
+            // Mathf.Clamp01 ensures the interpolation value stays between 0 and 1
+            float currentVolume = Mathf.Lerp(0f, 1f, timeElapsed / (GameConstants.maxTimeDaySeconds / 2));
+            Debug.Log(currentVolume);
+            diaNoite.GetComponent<Volume>().weight = currentVolume;
+
+            // Optional: Stop updating once the target volume is reached
+            if (timeElapsed >= (GameConstants.maxTimeDaySeconds / 2))
+            {
+                dayOrNight = true; // Disable the script to stop further updates
+                timeElapsed = 0;
+            }
         }
     }
 

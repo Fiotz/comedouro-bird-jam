@@ -561,7 +561,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -754,6 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd18fa4d48b5644cebb19c92eb11ee2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  diaNoite: {fileID: 1823326994}
   comedouroController: {fileID: 713977091}
   passarinhoController: {fileID: 1176894848}
   diarioHud: {fileID: 1366815425}
@@ -3790,6 +3791,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0be1739f3e9e6834da52ed4702f4abb4, type: 3}
+--- !u!1 &1823326994 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3581930220000318658, guid: 0be1739f3e9e6834da52ed4702f4abb4, type: 3}
+  m_PrefabInstance: {fileID: 1823326993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1908211225 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4052471467515587110, guid: f7f05e835c32d3842b72cb8c17bbf5f0, type: 3}
