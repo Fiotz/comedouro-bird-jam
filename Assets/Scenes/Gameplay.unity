@@ -558,10 +558,10 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
+    m_Bits: 4294967295
+  m_VolumeTrigger: {fileID: 1823326996}
+  m_VolumeFrameworkUpdateModeOption: 0
+  m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -3682,6 +3682,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 315899733
       objectReference: {fileID: 0}
+    - target: {fileID: 3581930220000318658, guid: 0be1739f3e9e6834da52ed4702f4abb4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4379217832304724814, guid: 0be1739f3e9e6834da52ed4702f4abb4, type: 3}
       propertyPath: m_SortingLayer
       value: -1
@@ -3794,6 +3798,11 @@ PrefabInstance:
 --- !u!1 &1823326994 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3581930220000318658, guid: 0be1739f3e9e6834da52ed4702f4abb4, type: 3}
+  m_PrefabInstance: {fileID: 1823326993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1823326996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4729638836798413474, guid: 0be1739f3e9e6834da52ed4702f4abb4, type: 3}
   m_PrefabInstance: {fileID: 1823326993}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1908211225 stripped
