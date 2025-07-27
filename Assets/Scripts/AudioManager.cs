@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip sfx5;
     public AudioClip sfx6;
 
+    void Awake()
+    {
+        Debug.Log(SceneManager.GetActiveScene().name);
+    }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
