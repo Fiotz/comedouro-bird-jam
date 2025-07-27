@@ -12,7 +12,7 @@ public static class GameConstants
 
     public static readonly float timerToCheckInSeconds = 1.0f;
 
-    public static readonly float maxTimeDaySeconds = 60.0f;
+    public static readonly float maxTimeDaySeconds = 10.0f;
 
     public static readonly float foodTimeToExpireInSeconds = 5.0f;
 

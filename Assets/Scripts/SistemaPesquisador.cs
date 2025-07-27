@@ -15,6 +15,16 @@ public class SistemaPesquisador : MonoBehaviour
     public GameObject botoesHud;
     public GameObject pauseHud;
 
+    [SerializeField, Header("Diario")]
+    public GameObject popupSaira;
+    public GameObject poemaSaira;
+    public GameObject popupTie;
+    public GameObject poemaTie;
+    public GameObject popupSanhaco;
+    public GameObject poemaSanhaco;
+    public GameObject popupSorte;
+    public GameObject poemaSorte;
+
     [SerializeField, Header("BG")]
     public GameObject bgHud;
 
@@ -60,15 +70,15 @@ public class SistemaPesquisador : MonoBehaviour
     IEnumerator PassedHour()
     {
         canAddHour = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(GameConstants.oneHourInSeconds);
         checkDay();
     }
 
     private void checkDay()
     {
         hoursPassed += GameConstants.oneHourInSeconds;
-        // Debug.Log(hoursPassed);
-        if (hoursPassed > GameConstants.maxTimeDaySeconds)
+        Debug.Log(hoursPassed);
+        if (hoursPassed >= GameConstants.maxTimeDaySeconds)
         {
             bgHud.GetComponent<Animator>().speed = 0;
             comedouroController.GetComponent<SistemaComedouroScript>().endOfTheDay();
@@ -78,6 +88,26 @@ public class SistemaPesquisador : MonoBehaviour
             informacaoHud.SetActive(false);
             botoesHud.SetActive(false);
             diarioHud.SetActive(true);
+            for (int i = 0; i < saira7coresComAnilhas; i++)
+            {
+                if (i < popupSaira.transform.childCount) popupSaira.transform.GetChild(popupSaira.transform.childCount - i - 1).gameObject.SetActive(true);
+                else poemaSaira.SetActive(true);
+            }
+            for (int i = 0; i < tiePretoComAnilhas; i++)
+            {
+                if (i < popupTie.transform.childCount) popupTie.transform.GetChild(popupTie.transform.childCount - i - 1).gameObject.SetActive(true);
+                else poemaTie.SetActive(true);
+            }
+            for (int i = 0; i < sanhacoComAnilhas; i++)
+            {
+                if (i < popupSanhaco.transform.childCount) popupSanhaco.transform.GetChild(popupSanhaco.transform.childCount - i - 1).gameObject.SetActive(true);
+                else poemaSanhaco.SetActive(true);
+            }
+            for (int i = 0; i < sairaMilitarComAnilhas; i++)
+            {
+                if (i < popupSorte.transform.childCount) popupSorte.transform.GetChild(popupSorte.transform.childCount - i - 1).gameObject.SetActive(true);
+                else poemaSorte.SetActive(true);
+            }
         }
         else
         {
