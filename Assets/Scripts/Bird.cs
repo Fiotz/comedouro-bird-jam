@@ -85,6 +85,7 @@ public class Bird : MonoBehaviour
     void Start()
     {
         posInit = transform.position;
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         switch (nameOfBird)
         {
             case "saira7cores":

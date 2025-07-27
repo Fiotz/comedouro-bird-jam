@@ -62,9 +62,12 @@ public class SistemaPesquisador : MonoBehaviour
 
     public bool setGameOver = false;
     public string gameOver = "";
+
+    AudioManager audioManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         text1.SetText(GameConstants.numMaxResearchUsesPerDay.ToString());
         text2.SetText(GameConstants.numMaxResearchUsesPerDay.ToString());
         isPlaying = !isPlaying;
@@ -108,6 +111,7 @@ public class SistemaPesquisador : MonoBehaviour
         if (hoursPassed >= GameConstants.maxTimeDaySeconds)
         {
             bgHud.GetComponent<Animator>().speed = 0;
+            audioManager.changeBackgroundMusic(audioManager.backgroundNight);
             comedouroController.GetComponent<SistemaComedouroScript>().endOfTheDay();
             passarinhoController.GetComponent<SistemaPassarinho>().endOfTheDay();
             daysPassed++;
@@ -241,6 +245,7 @@ public class SistemaPesquisador : MonoBehaviour
         else
         {
             verifyLevel();
+            audioManager.changeBackgroundMusic(audioManager.backgroundDay);
             diarioHud.SetActive(false);
             informacaoHud.SetActive(true);
             botoesHud.SetActive(true);
