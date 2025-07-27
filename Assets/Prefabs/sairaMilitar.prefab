@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 140111275762957138, guid: 7de2515ed709c49f799e15652188904c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2f20cf1f1e83c0046872bdea23045d1e, type: 2}
     - target: {fileID: 1262825627987136651, guid: 7de2515ed709c49f799e15652188904c, type: 3}
       propertyPath: m_Name
-      value: sanhaco
+      value: sairaMilitar
       objectReference: {fileID: 0}
     - target: {fileID: 1845444556486261101, guid: 7de2515ed709c49f799e15652188904c, type: 3}
       propertyPath: m_LocalPosition.x

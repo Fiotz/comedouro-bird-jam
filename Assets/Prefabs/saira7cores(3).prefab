@@ -50,7 +50,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3418386643376477013, guid: 72f0f51f73cbc4649839bd767e9de9a1, type: 3}
       propertyPath: m_Name
-      value: saira7cores(2)
+      value: saira7cores(3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163946780106060612, guid: 72f0f51f73cbc4649839bd767e9de9a1, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163946780106060612, guid: 72f0f51f73cbc4649839bd767e9de9a1, type: 3}
+      propertyPath: m_Color.g
+      value: 0.30430984
+      objectReference: {fileID: 0}
+    - target: {fileID: 4163946780106060612, guid: 72f0f51f73cbc4649839bd767e9de9a1, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7891481287937486854, guid: 72f0f51f73cbc4649839bd767e9de9a1, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7891481287937486854, guid: 72f0f51f73cbc4649839bd767e9de9a1, type: 3}
+      propertyPath: m_Color.r
+      value: 0.012771845
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
