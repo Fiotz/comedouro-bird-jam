@@ -708,6 +708,72 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ui_8
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 43
+        width: 79
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33aef622198665b49b1f822ebb920ce6
+      internalID: -1306775504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_9
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 49
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575c1386fa3ed3e4aad9fe1b0c36359c
+      internalID: -1304989124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_10
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 56
+        width: 83
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95043255f9e22543a358193b5f6e601
+      internalID: -2007590296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -724,6 +790,7 @@ TextureImporter:
     nameFileIdTable:
       ui_0: 5707218116961789024
       ui_1: 3556181715638617739
+      ui_10: -2007590296
       ui_12: -7420991742971661633
       ui_13: 6071220295474305178
       ui_14: 2697481083480110284
@@ -745,6 +812,8 @@ TextureImporter:
       ui_5: -9005941153719796207
       ui_6: 2163036573998151787
       ui_7: 8599436577718238185
+      ui_8: -1306775504
+      ui_9: -1304989124
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
