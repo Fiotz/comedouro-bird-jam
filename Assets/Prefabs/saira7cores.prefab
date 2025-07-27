@@ -105,6 +105,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Anilha: {fileID: 4149133193176087741}
   AnilhaFilha: {fileID: 4205939114117389635}
+  reacaoObj: {fileID: 4556280848034443080}
+  feliz: {fileID: 8599436577718238185, guid: 86ad3a1e80f4bf445a2e2cc9a2634fea, type: 3}
+  fome: {fileID: 1712464482933603101, guid: 86ad3a1e80f4bf445a2e2cc9a2634fea, type: 3}
+  nojo: {fileID: -9005941153719796207, guid: 86ad3a1e80f4bf445a2e2cc9a2634fea, type: 3}
+  briga: {fileID: -7975249404588759376, guid: 86ad3a1e80f4bf445a2e2cc9a2634fea, type: 3}
   isSpecialBird: 0
   nameOfBird: semNome
 --- !u!95 &1002025548255339565
@@ -356,6 +361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: reacao
       objectReference: {fileID: 0}
+    - target: {fileID: 8819108837826768791, guid: 3f04752aaaaf5784bb955ac612aae132, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -364,5 +373,10 @@ PrefabInstance:
 --- !u!4 &1427145937620843012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6239403180642679515, guid: 3f04752aaaaf5784bb955ac612aae132, type: 3}
+  m_PrefabInstance: {fileID: 4997004962156118239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4556280848034443080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8819108837826768791, guid: 3f04752aaaaf5784bb955ac612aae132, type: 3}
   m_PrefabInstance: {fileID: 4997004962156118239}
   m_PrefabAsset: {fileID: 0}

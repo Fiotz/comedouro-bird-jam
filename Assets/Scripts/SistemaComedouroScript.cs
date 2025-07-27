@@ -27,6 +27,8 @@ public class SistemaComedouroScript : MonoBehaviour
 
     private int numCleanUsesToday = 0;
 
+    private bool showReacao = true;
+
     void Awake()
     {
         healthComedouro = GameConstants.maxHealthForComedouro;
@@ -47,10 +49,30 @@ public class SistemaComedouroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isPlaying && showReacao)
+        {
+            StartCoroutine(ShowReacao());
+        }
         if (canCheckStatus && isPlaying)
         {
             // print("Check Status");
             StartCoroutine(VerifyStatusRoutine());
+        }
+    }
+    IEnumerator ShowReacao()
+    {
+        showReacao = false;
+        showReacaoInBirds(1);
+        yield return new WaitForSeconds(GameConstants.timerToCheckInSeconds * 1.33f);
+        showReacao = true;
+    }
+
+    public void showReacaoInBirds(int reac)
+    {
+        GameObject[] findBirds = GameObject.FindGameObjectsWithTag("Passaro");
+        foreach (GameObject bird in findBirds)
+        {
+            bird.GetComponent<Bird>().showReacao(reac);
         }
     }
 
@@ -108,10 +130,12 @@ public class SistemaComedouroScript : MonoBehaviour
         else if (healthComedouro < 25)
         {
             print("Comedouro Sujo, passaros doentes");
+            showReacaoInBirds(2);
         }
         else if (healthComedouro < 50)
         {
             print("Comedouro Sujo");
+            showReacaoInBirds(2);
         }
 
 
@@ -125,6 +149,7 @@ public class SistemaComedouroScript : MonoBehaviour
         if (numBirds < GameConstants.numBirdsSocialGoodMin || numBirds > GameConstants.numBirdsSocialGoodMax)
         {
             socialComedouro -= numBirds * GameConstants.decreaseSocialByNumBirds;
+            if(numBirds > GameConstants.numBirdsSocialGoodMax) showReacaoInBirds(3);
         }
         else
         {
