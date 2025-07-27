@@ -1034,8 +1034,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b>Alan Fiotz</b> - Programa\xE7\xE3o\n\n<b>Estela</b> - Narrative Designer\n\n<b>zagoiris</b>
-    - Arte 2D"
+  m_text: "<b>Devs</b>\n\n<b>Alan Floriano (@fiotzthecrazy) </b> - Programa\xE7\xE3o\n<b>Estela
+    Rosa (@estela_rosa)</b> - Narrative Designer\n<b>zagoiris (@zagoiris)</b> -\nArte
+    2D e Interface\n\n<b>Fontes de pesquisa:</b>\n\n<b>WikiAves (www.wikiaves.com.br)</b>\n<b>Aves
+    usando pulseira (@aves.usando.pulseiras) </b>\n\nCr\xE9dito das fotos:\n\n<b>Eduardo
+    Alexandrino</b>\n<b>Taynara Bessi</b>\n<b>Daniel Brazil</b>\n<b>Alexandre Savoy</b>\n\nEste
+    projeto foi desenvolvido e finalizado dos dias 24 a 27 de julho de 2025, durante
+    a 5\xAA edi\xE7\xE3o da BirdGameJam, no Legado das \xC1guas-SP.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9dba99234dadb084596388d0840259a1, type: 2}
   m_sharedMaterial: {fileID: 5505514698968509999, guid: 9dba99234dadb084596388d0840259a1, type: 2}
@@ -1062,14 +1067,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 31.01
+  m_fontSizeBase: 31.01
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2396,7 +2401,7 @@ MonoBehaviour:
   m_Padding:
     m_Left: 73
     m_Right: 87
-    m_Top: 187
+    m_Top: 218
     m_Bottom: 0
   m_ChildAlignment: 1
   m_Spacing: 69.93
@@ -2490,8 +2495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405, y: -569.2}
-  m_SizeDelta: {x: 560.02, y: 764.4}
+  m_AnchoredPosition: {x: 405, y: -600.2}
+  m_SizeDelta: {x: 605.2, y: 764.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2034988879
 MonoBehaviour:
@@ -2513,8 +2518,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "que bonita sua roupa\nque roupitcha muitcho louca\n\nela \xE9 toda\nremendada\n\nnao
-    vale nenhum centavo\n\nmas agrada quem usar"
+  m_text: "\"O projeto <b>Eu vi uma ave usando pulseiras!?</b>, idealizado pelo ornit\xF3logo
+    e pesquisador Eduardo Alexandrino, surgiu em 2016 no LEMAC/ESALQ/USP, em Piracicaba/SP.\n\nDesde
+    ent\xE3o, diversos p\xE1ssaros silvestres j\xE1 receberam pulseiras coloridas
+    que ajudam a monitor\xE1-los \xE0 dist\xE2ncia e entender seu comportamento.
+    O projeto est\xE1 espalhado por diferentes localidades do Brasil e conta com
+    o apoio de institui\xE7\xF5es parceiras.\n\nEm julho de 2025, a parceria com
+    o <b>Legado das \xC1guas</b> ganhou uma nova camada: a <b>BirdGameJam</b>. Durante
+    quatro dias, Eduardo Alexandrino e Taynara Bessi compartilharam com cerca de
+    30 desenvolvedores de jogos seu conhecimento sobre aves nativas da Mata Atl\xE2ntica.
+    E assim nos apresentaram as personagens <b>On\xE7afari, Moqui, Antafari, Zeca,
+    Pantera, Sky</b> e <b>Sorte</b>.\n\nEste jogo n\xE3o seria o mesmo sem eles e
+    sem os dados dessa pesquisa. Sorte a nossa cruzar com pesquisadores t\xE3o apaixonados.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9dba99234dadb084596388d0840259a1, type: 2}
   m_sharedMaterial: {fileID: 5505514698968509999, guid: 9dba99234dadb084596388d0840259a1, type: 2}
@@ -2541,14 +2556,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30.3
+  m_fontSizeBase: 30.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3074,7 +3089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 685480993199736393, guid: 474febf9ab2ae524a98316c775088761, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.54
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 685480993199736393, guid: 474febf9ab2ae524a98316c775088761, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3082,7 +3097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 685480993199736393, guid: 474febf9ab2ae524a98316c775088761, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.54
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1778769683851001315, guid: 474febf9ab2ae524a98316c775088761, type: 3}
       propertyPath: m_Pivot.x
@@ -3164,6 +3179,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2209528605755368964, guid: 474febf9ab2ae524a98316c775088761, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2209528605755368964, guid: 474febf9ab2ae524a98316c775088761, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 2461567555699528010, guid: 474febf9ab2ae524a98316c775088761, type: 3}
       propertyPath: m_Name
       value: som
@@ -3242,7 +3265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6053814712540950977, guid: 474febf9ab2ae524a98316c775088761, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.54
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6053814712540950977, guid: 474febf9ab2ae524a98316c775088761, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3250,7 +3273,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6053814712540950977, guid: 474febf9ab2ae524a98316c775088761, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.54
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190000084483858538, guid: 474febf9ab2ae524a98316c775088761, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8147601070569587677, guid: 474febf9ab2ae524a98316c775088761, type: 3}
       propertyPath: m_Value
@@ -3291,6 +3318,10 @@ PrefabInstance:
     - target: {fileID: 8147601070569587677, guid: 474febf9ab2ae524a98316c775088761, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176514211943500843, guid: 474febf9ab2ae524a98316c775088761, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
