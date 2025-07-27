@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6239403180642679515}
   - component: {fileID: 4534708941452731854}
   m_Layer: 0
-  m_Name: "Bal\xF5es Rea\xE7\xE3o"
+  m_Name: reacao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

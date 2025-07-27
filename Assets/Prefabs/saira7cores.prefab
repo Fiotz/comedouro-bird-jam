@@ -354,7 +354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8819108837826768791, guid: 3f04752aaaaf5784bb955ac612aae132, type: 3}
       propertyPath: m_Name
-      value: "Bal\xF5es Rea\xE7\xE3o"
+      value: reacao
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
